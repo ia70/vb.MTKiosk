@@ -1,0 +1,18 @@
+Comandos necesarios antes de establecer conexión:
+
+/ip service enable api 
+/ip firewall filter add chain=input protocol=tcp dst-port=8728 action=accept 
+/ip firewall filter mo 15 0 
+
+
+
+
+INSERTAR USUARIO:
+
+1h, 1d, 1m
+
+/ip hotspot user add name=k3884q password=i2787t limit-uptime=1h disabled=no profile=PLAN_1_HORA
+
+
+INSERTAR PERFIL:
+/ip hotspot user profile add name=1Hora limit-uptime=1h 
