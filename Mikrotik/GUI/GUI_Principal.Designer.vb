@@ -276,6 +276,7 @@ Partial Class GUI_Principal
         Me.Datos.Name = "Datos"
         Me.Datos.Size = New System.Drawing.Size(560, 181)
         Me.Datos.TabIndex = 11
+        Me.Datos.Visible = False
         '
         'txtConteo
         '
@@ -418,6 +419,7 @@ Partial Class GUI_Principal
         Me.AutoScaleDimensions = New System.Drawing.SizeF(9.0!, 18.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackgroundImage = Global.Mikrotik.My.Resources.Resources.Fondo_principal
+        Me.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
         Me.ClientSize = New System.Drawing.Size(1200, 750)
         Me.Controls.Add(Me.MarcadeAgua)
         Me.Controls.Add(Me.Desconectado)

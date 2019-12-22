@@ -9,7 +9,7 @@ Module MOD_Funciones_Generales
     Public Function DispositivoCargarDatos() As Boolean
         Dim DB As New DataBase
         Dim General As New D_General
-        Dim Cadena(6) As String
+        Dim Cadena(9) As String
 
         Dim x, y As Integer
         Try
@@ -62,6 +62,9 @@ Module MOD_Funciones_Generales
             G_Impresora = Cadena(4)
             G_Tecla = Cadena(5)
             G_Modo = Cadena(6)
+            G_QR = Convert.ToBoolean(Cadena(7))
+            G_TiempoVisualizacionFicha = Convert.ToInt32(Cadena(8))
+            G_Fondo = Cadena(9)
 
             CargarModo() ' Carga el modo mIKROTIK 
 
@@ -194,18 +197,20 @@ Module MOD_Funciones_Generales
                 End If
 
 
-
-                Ticket.QR = _QR.GenerarQR("http://" & DatosMikrotik(1) & "/acceso.html?usr=" & Datos(0) & "&pwd=" & Datos(1))
-                Ticket.Usuario = Datos(0)
-                Ticket.Password = Datos(1)
-
-
-                If File.Exists(G_LogotipoEmpresa) Then
-                    Ticket.Logotipo = Image.FromFile(G_LogotipoEmpresa)
+                If G_QR Then
+                    Ticket.QR = _QR.GenerarQR("http://" & DatosMikrotik(1) & "/acceso.html?usr=" & Datos(0) & "&pwd=" & Datos(1))
                 End If
 
+                Ticket.Usuario = Datos(0)
+                    Ticket.Password = Datos(1)
 
-                Ticket.ImprimirTicket()
+
+                    If File.Exists(G_LogotipoEmpresa) Then
+                        Ticket.Logotipo = Image.FromFile(G_LogotipoEmpresa)
+                    End If
+
+
+                    Ticket.ImprimirTicket()
                     GUI_Principal.TiempoVisualizacion.Enabled = True
                 End If
         Catch ex As Exception

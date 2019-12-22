@@ -46,9 +46,15 @@ Public Class DataBase
             Comando.CommandText = "INSERT INTO historial VALUES(" & Indice() & ", '" & usuario_ & "', '" & password_ & "', '" & plan_ & "', " & fecha & ")"
             Comando.Connection = Conexion
             Conexion.Open()
-            Respuesta = Comando.ExecuteNonQuery()
+
+            If Comando.ExecuteNonQuery() > 0 Then
+                Respuesta = True
+            Else
+                Respuesta = False
+            End If
+
             Conexion.Close()
-            Return Respuesta
+                Return Respuesta
         Catch ex As Exception
             If MostrarError Then
                 Mensaje(ex.ToString, 2)

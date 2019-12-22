@@ -5,11 +5,14 @@
     Public G_Impresora As String = ""
     Public G_Tecla As Integer = 13
     Public G_Modo As Integer = 1
+    Public G_QR As Boolean = False
+    Public G_TiempoVisualizacionFicha As Integer = 5
+    Public G_Fondo As String = ""
 
     Public MostrarError As Boolean = False
 #End Region
 #Region "Base de datos"
-    Public DB_Nombre As String = "ApTdx.dll"
+    Public DB_Nombre As String = "ApTdxd.mdb"
     Public DB_Password As String = "xcoru12345"
 
 #End Region

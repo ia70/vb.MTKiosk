@@ -3,13 +3,13 @@
         Dim MK As New Mikrotik()
         Try
             If txtPuerto.Text.Length = 0 Or Val(txtPuerto.Text) = 0 Or Val(txtPuerto.Text) = -1 Then
-                txtPuerto.Text = 8728
+                txtPuerto.Text = 8728.ToString
             End If
 
-            If MK.Open(txtIP.Text, txtUsuario.Text, txtPassword.Text, Val(txtPuerto.Text)) Then
+            If MK.Open(txtIP.Text, txtUsuario.Text, txtPassword.Text, Convert.ToInt32(txtPuerto.Text)) Then
                 Mensaje("¡Conexión establecida correctamente!")
                 MK.Close()
-                Mikrotik_Cargar_Perfiles(txtIP.Text, Val(txtPuerto.Text), txtUsuario.Text, txtPassword.Text)
+                Mikrotik_Cargar_Perfiles(txtIP.Text, Convert.ToInt32(txtPuerto.Text), txtUsuario.Text, txtPassword.Text)
             Else
                 Mensaje("¡Error de conexión!", 2)
             End If
@@ -33,6 +33,10 @@
         txtUsuario.Text = DatosMikrotik(2)
         txtPassword.Text = DatosMikrotik(3)
         txtPuerto.Text = DatosMikrotik(4)
+
+        If txtPuerto.TextLength < 1 Then
+            txtPuerto.Text = 8728
+        End If
 
         '------------------------------------------------------------------------------------------
         If Val(Plan(4, 1)) < 1 Then
@@ -72,6 +76,12 @@
         txtNombreEmpresa.Text = G_NombreEmpresa
         txtLogotipo.Text = G_LogotipoEmpresa
         txtNombreImpresora.Text = G_Impresora
+        On Error Resume Next
+        txtQR.Checked = G_QR
+        On Error Resume Next
+        txtFondo.Text = G_Fondo
+        On Error Resume Next
+        txtTiempoFicha.Value = G_TiempoVisualizacionFicha
         txtCreditos.Value = C_ValorCredito
         txtTecla.Text = ChrW(G_Tecla)
         On Error Resume Next
@@ -168,7 +178,7 @@
             _Plan_nombre(x) = txtPlan1.SelectedItem
             _Plan(x) = _Plan_nombre(x)
             _Plan_nombre(x) = _Plan_nombre(x).Replace("_", " ")
-            _Costo(x) = Val(txtPrecio1.Text)
+            _Costo(x) = Convert.ToInt32(txtPrecio1.Text)
 
             x += 1
             _Plan_nombre(x) = txtPlan2.SelectedItem
@@ -180,7 +190,7 @@
             _Plan_nombre(x) = txtPlan3.SelectedItem
             _Plan(x) = _Plan_nombre(x)
             _Plan_nombre(x) = _Plan_nombre(x).Replace("_", " ")
-            _Costo(x) = Val(txtPrecio3.Text)
+            _Costo(x) = Convert.ToInt32(txtPrecio3.Text)
 
             x += 1
             '_Plan_nombre(x) = txtCreditos.Value
@@ -297,14 +307,21 @@
             ElseIf val(txtTecla.text) < 1 Or Val(txtTecla.text) > 255 Then
                 Exit Sub
             End If
-            _Tecla = Val(txtTecla.Text)
+            _Tecla = Convert.ToInt32(txtTecla.Text)
         End If
 
-        If DB.Guardar(txtNombreEmpresa.Text, txtLogotipo.Text, txtCreditos.Value, txtNombreImpresora.Text, _Tecla, txtModo.SelectedIndex) Then
+        If DB.Guardar(txtNombreEmpresa.Text, txtLogotipo.Text, Convert.ToInt32(txtCreditos.Value), txtNombreImpresora.Text, _Tecla, txtModo.SelectedIndex, txtQR.Checked, Convert.ToInt32(txtTiempoFicha.Value), txtFondo.Text) Then
             Mensaje("Información guardada!")
             DispositivoCargarDatos()
         Else
             Mensaje("Error: Información no guardada!", 2)
+        End If
+    End Sub
+
+    Private Sub BtnFondo_Click(sender As Object, e As EventArgs) Handles btnFondo.Click
+        If dgFondo.ShowDialog() <> DialogResult.Cancel Then
+            txtFondo.Text = dgFondo.FileName
+            RefrescarFondo()
         End If
     End Sub
 End Class

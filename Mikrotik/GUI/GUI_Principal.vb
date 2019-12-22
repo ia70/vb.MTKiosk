@@ -25,6 +25,13 @@ Public Class GUI_Principal
     Private Sub Principal_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         DispositivoCargarDatos()
 
+        Try
+            Me.BackgroundImage = Image.FromFile(G_Fondo)
+        Catch ex As Exception
+
+        End Try
+
+
         'JOYSTICK ***************************
         myjoyEX.dwSize = 64
         myjoyEX.dwFlags = &HFF
@@ -82,21 +89,27 @@ Public Class GUI_Principal
     End Sub
 
     Private Sub Tiempo_Tick(sender As Object, e As EventArgs) Handles TiempoVisualizacion.Tick
-        Static Contador As Integer = 20
+        Static Contador As Integer = G_TiempoVisualizacionFicha
 
-        If Contador = 0 Then
-            Contador = 20
+        If G_TiempoVisualizacionFicha < 5 Then
+            TiempoVisualizacion.Enabled = False
+        End If
+
+        If Contador <= 0 Then
+            Contador = G_TiempoVisualizacionFicha
             txtUsuario.Text = ""
             txtPassword.Text = ""
             txtConteo.Visible = False
             TiempoVisualizacion.Enabled = False
-        ElseIf Contador = 20 Then
+            Datos.Visible = False
+        ElseIf Contador = G_TiempoVisualizacionFicha Then
             txtConteo.Visible = True
-            txtConteo.Text = 20
+            txtConteo.Text = G_TiempoVisualizacionFicha
             Contador -= 1
+            Datos.Visible = True
         Else
-            txtConteo.Text = Val(txtConteo.Text) - 1
-            Contador = Val(txtConteo.Text)
+            txtConteo.Text = Contador
+            Contador -= 1
         End If
 
     End Sub
