@@ -1,0 +1,268 @@
+﻿<?xml version="1.0"?>
+<doc>
+<assembly>
+<name>
+Mikrotik
+</name>
+</assembly>
+<members>
+<member name="T:Mikrotik.My.Resources.Resources">
+<summary>
+  Clase de recurso fuertemente tipado, para buscar cadenas traducidas, etc.
+</summary>
+</member>
+<member name="P:Mikrotik.My.Resources.Resources.ResourceManager">
+<summary>
+  Devuelve la instancia de ResourceManager almacenada en caché utilizada por esta clase.
+</summary>
+</member>
+<member name="P:Mikrotik.My.Resources.Resources.Culture">
+<summary>
+  Reemplaza la propiedad CurrentUICulture del subproceso actual para todas las
+  búsquedas de recursos mediante esta clase de recurso fuertemente tipado.
+</summary>
+</member>
+<member name="P:Mikrotik.My.Resources.Resources.Amarillo">
+<summary>
+  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:Mikrotik.My.Resources.Resources.Azul">
+<summary>
+  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:Mikrotik.My.Resources.Resources.Cerrar">
+<summary>
+  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:Mikrotik.My.Resources.Resources.Desconectado">
+<summary>
+  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:Mikrotik.My.Resources.Resources.Fondo">
+<summary>
+  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:Mikrotik.My.Resources.Resources.Fondo_principal">
+<summary>
+  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:Mikrotik.My.Resources.Resources.LOGO_100x100_No_Fondo">
+<summary>
+  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:Mikrotik.My.Resources.Resources.Logo_32x32">
+<summary>
+  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:Mikrotik.My.Resources.Resources.lupa">
+<summary>
+  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:Mikrotik.My.Resources.Resources.Morado">
+<summary>
+  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:Mikrotik.My.Resources.Resources.Rojo">
+<summary>
+  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="T:Mikrotik.DataBase">
+ <summary>
+ Clase de conexión a a Base de Datos Access 2010 .mdb
+ </summary>
+</member>
+<member name="M:Mikrotik.DataBase.Estado">
+ <summary>
+ Verifica conexíon con la Base de Datos
+ </summary>
+ <returns>
+ True - Si conexión correcta
+ False - Si conexión incorrecta
+ </returns>
+</member>
+<member name="M:Mikrotik.DataBase.HistorialInsertar(System.String,System.String,System.String)">
+ <summary>
+ Inserta registro al historial en la Base de Datos
+ </summary>
+ <param name="usuario_">Nombre de usuario</param>
+ <param name="password_">Contraseña</param>
+ <param name="plan_">Número de plan</param>
+ <returns></returns>
+</member>
+<member name="M:Mikrotik.DataBase.CargarDispositivo">
+ <summary>
+ Carga información del disposito Mikrotik
+ </summary>
+ <returns>Cadena()</returns>
+</member>
+<member name="M:Mikrotik.DataBase.CargarPlanes">
+ <summary>
+ Carga los planes
+ </summary>
+ <returns>Cadena(,)</returns>
+</member>
+<member name="M:Mikrotik.DataBase.EditarDispositivo(System.String,System.String,System.String,System.Int32)">
+ <summary>
+ Edita Configuración de dispositivo
+ </summary>
+ <param name="ip_">IP del dispositivo Mikrotik</param>
+ <param name="usuario_">Nombre de usuario</param>
+ <param name="pass_">Contraseña</param>
+ <param name="puerto_">Puerto</param>
+ <returns></returns>
+</member>
+<member name="M:Mikrotik.DataBase.EditarPlan(System.Int32,System.String,System.String,System.Int32)">
+ <summary>
+ Modifica un plan
+ </summary>
+ <param name="No">Número de plan a modificar</param>
+ <returns></returns>
+</member>
+<member name="M:Mikrotik.DataBase.VerificarUsuario(System.String)">
+ <summary>
+ Verifica si existe un ususrio
+ </summary>
+ <param name="usuario_">Nombre de usuario a verificar</param>
+ <returns>
+ True - Si existe
+ False - Si no existe
+ </returns>
+</member>
+<member name="M:Mikrotik.DataBase.EliminarAntiguos(System.Int32)">
+ <summary>
+ Elimina los registros de mas de un determinado tiempo de antiguedad
+ </summary>
+ <param name="Meses">Antiguedad de registros</param>
+ <returns>
+ True - Si elimino algun registro
+ False - Si no eliminó ningun registro
+ </returns>
+</member>
+<member name="M:Mikrotik.MOD_Funciones_Generales.DispositivoCargarDatos">
+ <summary>
+ 'Carga toda la información inicial
+ </summary>
+ <returns></returns>
+</member>
+<member name="M:Mikrotik.MOD_Funciones_Generales.Mikrotik_Cargar_Perfiles">
+ <summary>
+ 'Carga los perfiles existentes del Mikrotik
+ </summary>
+</member>
+<member name="M:Mikrotik.MOD_Funciones_Generales.Operacion(System.Int32,System.String)">
+ <summary>
+ Analiza la operación seleccionada
+ </summary>
+ <param name="Valor">Operación seleccionada</param>
+</member>
+<member name="M:Mikrotik.MOD_Funciones_Generales.GenerarUsuario(System.Int32)">
+ <summary>
+ Genera un array con un usuario y una contraseña
+ </summary>
+ <param name="Longitud_"></param>
+ <returns>Array</returns>
+</member>
+<member name="M:Mikrotik.MOD_Funciones_Generales.Mensaje(System.String,System.Int32)">
+ <summary>
+ Envia cuadro de mensaje
+ </summary>
+ <param name="Mensaje">Texto</param>
+ <param name="Icono">0, 1, 2</param>
+</member>
+<member name="M:Mikrotik.MOD_Funciones_Generales.Limpiar">
+ <summary>
+ Limpia los valores de credito
+ </summary>
+</member>
+<member name="M:Mikrotik.MikrotikAPI.#ctor(System.String,System.String,System.String,System.Int32)">
+ <summary>
+ Establece parámetros conexión con el dispositivo Mikrotik
+ </summary>
+ <param name="_ip">Dirección IP</param>
+ <param name="_usuario">Nombre de Usuario</param>
+ <param name="_pass">Contraseña</param>
+ <param name="_puerto">Puerto</param>
+</member>
+<member name="M:Mikrotik.MikrotikAPI.Open(System.String,System.String,System.String,System.Int32)">
+ <summary>
+ Abre conexión con el dispositivo Mikrotik
+ </summary>
+ <param name="_ip">Dirección IP</param>
+ <param name="_usuario">Nombre de Usuario</param>
+ <param name="_pass">Contraseña</param>
+ <param name="_puerto">Puerto</param>
+ <returns>
+ True - Si se realizo la conexión correctamente
+ False - Si se generó algun error
+ </returns>
+</member>
+<member name="P:Mikrotik.Mikrotik.IP">
+ <summary>
+ Obtiene - Establece -> Dirección IP del Dispositivo Mikrotik
+ </summary>
+ <returns>IP Mikrotik</returns>
+</member>
+<member name="P:Mikrotik.Mikrotik.Usuario">
+ <summary>
+ Obtiene - Establece -> Nombre de Usuario
+ </summary>
+ <returns>Nombre de Usuario</returns>
+</member>
+<member name="P:Mikrotik.Mikrotik.Password">
+ <summary>
+ Obtiene - Establece -> Contraseña de inicio de sesión
+ </summary>
+ <returns>Contraseña</returns>
+</member>
+<member name="P:Mikrotik.Mikrotik.Puerto">
+ <summary>
+ Obtiene - Establece -> Puerto del dispositivo Mikrotik
+ </summary>
+ <returns>Puerto del dispositivo Mikrotik</returns>
+</member>
+<member name="P:Mikrotik.Mikrotik.Conexion">
+ <summary>
+ Estado de la conexión
+ </summary>
+ <returns></returns>
+</member>
+<member name="M:Mikrotik.Mikrotik.#ctor(System.String,System.String,System.String,System.Int32)">
+ <summary>
+ Constructor de clase Mikrotik
+ </summary>
+ <param name="ip_">Establece dirección IP del dispositivo Mikrotik</param>
+ <param name="usuario_">Establece Nombre de usuario</param>
+ <param name="password_">Establece Contraseña</param>
+</member>
+<member name="M:Mikrotik.Mikrotik.Open(System.String,System.String,System.String,System.Int32)">
+ <summary>
+ Abre conexion con dispositivo
+ </summary>
+ <returns>Boolean</returns>
+</member>
+<member name="M:Mikrotik.Mikrotik.Insertar(System.String,System.String,System.String,System.String)">
+ <summary>
+ Ingresar Usuario a Mikrotik
+ </summary>
+ <param name="Usuario">Nombre de usuario</param>
+ <param name="Password">Contraseña</param>
+ <param name="Plan">Plan</param>
+ <param name="Perfil">Perfil</param>
+ <returns>
+ True - Si no se generó ningun error
+ False - Si se generó algun error
+ </returns>
+</member>
+</members>
+</doc>

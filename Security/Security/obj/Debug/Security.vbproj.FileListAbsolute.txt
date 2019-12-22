@@ -1,0 +1,15 @@
+C:\Users\XCORU\Documents\Visual Studio 2019\Proyectos\vb.MTKiosk\Security\Security\bin\Debug\Security.exe.config
+C:\Users\XCORU\Documents\Visual Studio 2019\Proyectos\vb.MTKiosk\Security\Security\bin\Debug\Security.exe
+C:\Users\XCORU\Documents\Visual Studio 2019\Proyectos\vb.MTKiosk\Security\Security\bin\Debug\Security.pdb
+C:\Users\XCORU\Documents\Visual Studio 2019\Proyectos\vb.MTKiosk\Security\Security\bin\Debug\Security.xml
+C:\Users\XCORU\Documents\Visual Studio 2019\Proyectos\vb.MTKiosk\Security\Security\obj\Debug\Security.vbprojAssemblyReference.cache
+C:\Users\XCORU\Documents\Visual Studio 2019\Proyectos\vb.MTKiosk\Security\Security\obj\Debug\Security.GUI_Activar.resources
+C:\Users\XCORU\Documents\Visual Studio 2019\Proyectos\vb.MTKiosk\Security\Security\obj\Debug\Security.GUI_GenerarSolicitud.resources
+C:\Users\XCORU\Documents\Visual Studio 2019\Proyectos\vb.MTKiosk\Security\Security\obj\Debug\Security.GUI_NoActivado.resources
+C:\Users\XCORU\Documents\Visual Studio 2019\Proyectos\vb.MTKiosk\Security\Security\obj\Debug\Security.GUI_GenerarLicencia.resources
+C:\Users\XCORU\Documents\Visual Studio 2019\Proyectos\vb.MTKiosk\Security\Security\obj\Debug\Security.Resources.resources
+C:\Users\XCORU\Documents\Visual Studio 2019\Proyectos\vb.MTKiosk\Security\Security\obj\Debug\Security.vbproj.GenerateResource.cache
+C:\Users\XCORU\Documents\Visual Studio 2019\Proyectos\vb.MTKiosk\Security\Security\obj\Debug\Security.vbproj.CoreCompileInputs.cache
+C:\Users\XCORU\Documents\Visual Studio 2019\Proyectos\vb.MTKiosk\Security\Security\obj\Debug\Security.exe
+C:\Users\XCORU\Documents\Visual Studio 2019\Proyectos\vb.MTKiosk\Security\Security\obj\Debug\Security.xml
+C:\Users\XCORU\Documents\Visual Studio 2019\Proyectos\vb.MTKiosk\Security\Security\obj\Debug\Security.pdb

@@ -1,0 +1,142 @@
+﻿<?xml version="1.0"?>
+<doc>
+<assembly>
+<name>
+Security
+</name>
+</assembly>
+<members>
+<member name="T:Security.My.Resources.Resources">
+<summary>
+  A strongly-typed resource class, for looking up localized strings, etc.
+</summary>
+</member>
+<member name="P:Security.My.Resources.Resources.ResourceManager">
+<summary>
+  Returns the cached ResourceManager instance used by this class.
+</summary>
+</member>
+<member name="P:Security.My.Resources.Resources.Culture">
+<summary>
+  Overrides the current thread's CurrentUICulture property for all
+  resource lookups using this strongly typed resource class.
+</summary>
+</member>
+<member name="M:Security.Activacion.GetRequestCode">
+ <summary>
+  ______________
+ |GetRequestCode| --> Genera código de solicitud.
+ </summary>
+ <returns>Código de solicitud encriptado</returns>
+</member>
+<member name="M:Security.Activacion.GetLicenceCode(System.String,System.Int32)">
+ <summary>
+  ______________
+ |GetLicenceCode| --> Devuelve Licencia de activacion en base a un código de solicitud.
+ </summary>
+ <param name="Solicitud">Código de solicitud</param>
+ <returns>Licencia</returns>
+</member>
+<member name="M:Security.Activacion.Activar_Prodcuto(System.String)">
+ <summary>
+  ________________
+ |Activar_Producto| --> Se encarga de realizar la activación del producto.
+ </summary>
+ <param name="Licencia"></param>
+ <returns></returns>
+</member>
+<member name="M:Security.Activacion.IniciarAPP">
+ <summary>
+  ___________
+ |IniciarAPP| --> Se encarga de iniciar verificación de licencia en el equipo
+ </summary>
+ <returns></returns>
+</member>
+<member name="M:Security.Activacion.#ctor">
+ <summary>
+ Contructor de clase
+ </summary>
+</member>
+<member name="M:Security.Activacion.GetCPUId">
+ <summary>
+ Obtiene el ID del CPU
+ </summary>
+ <returns></returns>
+</member>
+<member name="M:Security.Activacion.GetMotherBoardID">
+ <summary>
+ Obtiene ID de la tarjeta madre
+ </summary>
+ <returns></returns>
+</member>
+<member name="M:Security.Activacion.GetMacAddress">
+ <summary>
+ Obtiene Dierección MAC de la primera tarjeta de red valida
+ </summary>
+ <returns></returns>
+</member>
+<member name="M:Security.Activacion.GetVolumeSerial">
+ <summary>
+ Obtiene Numero de serie del disco duro
+ </summary>
+ <returns></returns>
+</member>
+<member name="M:Security.Activacion.GetPC_Code">
+ <summary>
+  __________
+ |GetPC_Code| --> Crea HASH único para cada PC en base a información de componentes 
+ </summary>
+ <returns></returns>
+</member>
+<member name="M:Security.Activacion.Encriptar(System.String)">
+ <summary>
+  _________
+ |Encriptar| --> Encripta una cadena.
+ </summary>
+ <param name="Cadena">Cadena a Encriptar</param>
+ <returns></returns>
+</member>
+<member name="M:Security.Activacion.Desencriptar(System.String)">
+ <summary>
+  ____________
+ |Desencriptar| --> Desencripta una cadena. 
+ </summary>
+ <param name="Cadena_Encriptada">Cadena a Desencriptar</param>
+ <returns></returns>
+</member>
+<member name="M:Security.Activacion.TruncateHash(System.String,System.Int32)">
+ <summary>
+ Algoritmo de encriptación
+ </summary>
+ <param name="key"></param>
+ <param name="length"></param>
+ <returns></returns>
+</member>
+<member name="M:Security.Activacion.VerificarSolicitud(System.String)">
+ <summary>
+ Verificar solicitud
+ </summary>
+ <param name="Cadena">Código de solicitud</param>
+ <returns></returns>
+</member>
+<member name="M:Security.Activacion.VerificarLicencia(System.String)">
+ <summary>
+ Verificar Licencia
+ </summary>
+ <param name="Cadena">Código de Licencia</param>
+ <returns></returns>
+</member>
+<member name="M:Security.Config.MSG(System.String,System.Int32)">
+ <summary>
+ Mensaje
+ </summary>
+ <param name="Mensaje">Cadena de texto</param>
+ <param name="Tipo">
+ Informacion - 0; 
+ Exclamación - 1; 
+ Critico - 2; 
+ Pregunta - 3
+ </param>
+</member>
+</members>
+</doc>
