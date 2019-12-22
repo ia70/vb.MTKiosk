@@ -195,7 +195,7 @@ Module MOD_Funciones_Generales
 
 
 
-                Ticket.QR = _QR.GenerarQR(DatosMikrotik(1) & "/acceso.html?usr=" & Datos(0) & "&pwd=" & Datos(1))
+                Ticket.QR = _QR.GenerarQR("http://" & DatosMikrotik(1) & "/acceso.html?usr=" & Datos(0) & "&pwd=" & Datos(1))
                 Ticket.Usuario = Datos(0)
                 Ticket.Password = Datos(1)
 
