@@ -10,6 +10,7 @@
                 Mensaje("¡Conexión establecida correctamente!")
                 MK.Close()
                 Mikrotik_Cargar_Perfiles(txtIP.Text, Convert.ToInt32(txtPuerto.Text), txtUsuario.Text, txtPassword.Text)
+                Cargar_Perfiles()
             Else
                 Mensaje("¡Error de conexión!", 2)
             End If

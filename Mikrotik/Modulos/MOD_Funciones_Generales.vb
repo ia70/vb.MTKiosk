@@ -190,7 +190,7 @@ Module MOD_Funciones_Generales
                 Ticket.Plan = _plan
 
                 If G_Impresora = "" Or G_Impresora = Nothing Then
-                    Mensaje("Impresora inválida", 2)
+                    'Mensaje("Impresora inválida", 2)
                     Ticket.Impresora = ""
                 Else
                     Ticket.Impresora = G_Impresora
@@ -214,7 +214,7 @@ Module MOD_Funciones_Generales
                     GUI_Principal.TiempoVisualizacion.Enabled = True
                 End If
         Catch ex As Exception
-            Mensaje("Error al intentar imprimir!", 2)
+            'Mensaje("Error al intentar imprimir!", 2)
             If MostrarError Then
                 Mensaje(ex.ToString, 2)
             End If

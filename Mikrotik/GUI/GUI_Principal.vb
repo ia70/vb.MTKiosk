@@ -96,17 +96,19 @@ Public Class GUI_Principal
         End If
 
         If Contador <= 0 Then
+            TiempoVisualizacion.Enabled = False
             Contador = G_TiempoVisualizacionFicha
             txtUsuario.Text = ""
             txtPassword.Text = ""
-            txtConteo.Visible = False
-            TiempoVisualizacion.Enabled = False
             Datos.Visible = False
+            txtConteo.Visible = False
+            Contador = G_TiempoVisualizacionFicha
+
         ElseIf Contador = G_TiempoVisualizacionFicha Then
             txtConteo.Visible = True
-            txtConteo.Text = G_TiempoVisualizacionFicha
-            Contador -= 1
+            txtConteo.Text = Contador
             Datos.Visible = True
+            Contador -= 1
         Else
             txtConteo.Text = Contador
             Contador -= 1

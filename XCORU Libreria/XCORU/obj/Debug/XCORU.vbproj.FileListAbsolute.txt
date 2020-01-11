@@ -9,3 +9,4 @@ C:\Users\XCORU\Documents\Visual Studio 2019\Proyectos\vb.MTKiosk\XCORU Libreria\
 C:\Users\XCORU\Documents\Visual Studio 2019\Proyectos\vb.MTKiosk\XCORU Libreria\XCORU\obj\Debug\XCORU.dll
 C:\Users\XCORU\Documents\Visual Studio 2019\Proyectos\vb.MTKiosk\XCORU Libreria\XCORU\obj\Debug\XCORU.xml
 C:\Users\XCORU\Documents\Visual Studio 2019\Proyectos\vb.MTKiosk\XCORU Libreria\XCORU\obj\Debug\XCORU.pdb
+C:\Users\XCORU\Documents\Visual Studio 2019\Proyectos\vb.MTKiosk\XCORU Libreria\XCORU\obj\Debug\XCORU.vbprojAssemblyReference.cache

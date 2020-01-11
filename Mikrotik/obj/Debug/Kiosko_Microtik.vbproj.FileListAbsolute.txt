@@ -18,10 +18,10 @@ C:\Users\XCORU\Documents\Visual Studio 2019\Proyectos\vb.MTKiosk\Mikrotik\obj\De
 C:\Users\XCORU\Documents\Visual Studio 2019\Proyectos\vb.MTKiosk\Mikrotik\obj\Debug\Mikrotik.GUI_Config.resources
 C:\Users\XCORU\Documents\Visual Studio 2019\Proyectos\vb.MTKiosk\Mikrotik\obj\Debug\Mikrotik.GUI_Principal.resources
 C:\Users\XCORU\Documents\Visual Studio 2019\Proyectos\vb.MTKiosk\Mikrotik\obj\Debug\Mikrotik.Inicializar_App.resources
-C:\Users\XCORU\Documents\Visual Studio 2019\Proyectos\vb.MTKiosk\Mikrotik\obj\Debug\Mikrotik.PRUEBAS.resources
 C:\Users\XCORU\Documents\Visual Studio 2019\Proyectos\vb.MTKiosk\Mikrotik\obj\Debug\Mikrotik.Resources.resources
 C:\Users\XCORU\Documents\Visual Studio 2019\Proyectos\vb.MTKiosk\Mikrotik\obj\Debug\Kiosko_Microtik.vbproj.GenerateResource.cache
 C:\Users\XCORU\Documents\Visual Studio 2019\Proyectos\vb.MTKiosk\Mikrotik\obj\Debug\Kiosko_Microtik.vbproj.CoreCompileInputs.cache
 C:\Users\XCORU\Documents\Visual Studio 2019\Proyectos\vb.MTKiosk\Mikrotik\obj\Debug\Kiosko_Microtik.vbproj.CopyComplete
 C:\Users\XCORU\Documents\Visual Studio 2019\Proyectos\vb.MTKiosk\Mikrotik\obj\Debug\Mikrotik.exe
 C:\Users\XCORU\Documents\Visual Studio 2019\Proyectos\vb.MTKiosk\Mikrotik\obj\Debug\Mikrotik.pdb
+C:\Users\XCORU\Documents\Visual Studio 2019\Proyectos\vb.MTKiosk\Mikrotik\obj\Debug\Mikrotik.PRUEBAS_SSH.resources

@@ -398,6 +398,7 @@ Partial Class GUI_Config
         Me.txtPassword.PasswordChar = Global.Microsoft.VisualBasic.ChrW(42)
         Me.txtPassword.Size = New System.Drawing.Size(158, 26)
         Me.txtPassword.TabIndex = 6
+        Me.txtPassword.Text = "82497EEW"
         Me.txtPassword.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
         '
         'Label2
@@ -417,6 +418,7 @@ Partial Class GUI_Config
         Me.txtUsuario.Name = "txtUsuario"
         Me.txtUsuario.Size = New System.Drawing.Size(152, 26)
         Me.txtUsuario.TabIndex = 4
+        Me.txtUsuario.Text = "admin"
         Me.txtUsuario.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
         '
         'Label1
@@ -436,6 +438,7 @@ Partial Class GUI_Config
         Me.txtIP.Name = "txtIP"
         Me.txtIP.Size = New System.Drawing.Size(139, 26)
         Me.txtIP.TabIndex = 2
+        Me.txtIP.Text = "192.168.1.1"
         Me.txtIP.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
         '
         'GroupBox3

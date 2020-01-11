@@ -1,6 +1,6 @@
 ﻿Imports Renci.SshNet
 
-Public Class PRUEBAS
+Public Class PRUEBAS_SSH
     Private mk As MK
     Private estado As Boolean = False
     Private Sub Button1_Click(sender As Object, e As EventArgs) Handles btnIniciar.Click

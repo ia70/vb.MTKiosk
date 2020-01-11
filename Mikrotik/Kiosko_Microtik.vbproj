@@ -117,10 +117,10 @@
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="GUI\MK.vb" />
-    <Compile Include="GUI\PRUEBAS.Designer.vb">
-      <DependentUpon>PRUEBAS.vb</DependentUpon>
+    <Compile Include="GUI\PRUEBAS_SSH.Designer.vb">
+      <DependentUpon>PRUEBAS_SSH.vb</DependentUpon>
     </Compile>
-    <Compile Include="GUI\PRUEBAS.vb">
+    <Compile Include="GUI\PRUEBAS_SSH.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Modulos\Mod_Cargar_Info.vb" />
@@ -151,6 +151,12 @@
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
     <Compile Include="Clases\QRCode.vb" />
+    <Compile Include="PRUEBAS_API.Designer.vb">
+      <DependentUpon>PRUEBAS_API.vb</DependentUpon>
+    </Compile>
+    <Compile Include="PRUEBAS_API.vb">
+      <SubType>Form</SubType>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="GUI\GUI_Config.resx">
@@ -162,8 +168,8 @@
     <EmbeddedResource Include="GUI\Inicializar_App.resx">
       <DependentUpon>Inicializar_App.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="GUI\PRUEBAS.resx">
-      <DependentUpon>PRUEBAS.vb</DependentUpon>
+    <EmbeddedResource Include="GUI\PRUEBAS_SSH.resx">
+      <DependentUpon>PRUEBAS_SSH.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="My Project\Resources.resx">
       <Generator>VbMyResourcesResXFileCodeGenerator</Generator>
