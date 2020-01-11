@@ -2,7 +2,6 @@ C:\Users\XCORU\Documents\Visual Studio 2019\Proyectos\vb.MTKiosk\XCORU Libreria\
 C:\Users\XCORU\Documents\Visual Studio 2019\Proyectos\vb.MTKiosk\XCORU Libreria\XCORU\bin\Debug\XCORU.pdb
 C:\Users\XCORU\Documents\Visual Studio 2019\Proyectos\vb.MTKiosk\XCORU Libreria\XCORU\bin\Debug\XCORU.xml
 C:\Users\XCORU\Documents\Visual Studio 2019\Proyectos\vb.MTKiosk\XCORU Libreria\XCORU\bin\Debug\itextsharp.dll
-C:\Users\XCORU\Documents\Visual Studio 2019\Proyectos\vb.MTKiosk\XCORU Libreria\XCORU\obj\Debug\XCORU.vbprojAssemblyReference.cache
 C:\Users\XCORU\Documents\Visual Studio 2019\Proyectos\vb.MTKiosk\XCORU Libreria\XCORU\obj\Debug\XCORU.Resources.resources
 C:\Users\XCORU\Documents\Visual Studio 2019\Proyectos\vb.MTKiosk\XCORU Libreria\XCORU\obj\Debug\XCORU.vbproj.GenerateResource.cache
 C:\Users\XCORU\Documents\Visual Studio 2019\Proyectos\vb.MTKiosk\XCORU Libreria\XCORU\obj\Debug\XCORU.vbproj.CoreCompileInputs.cache

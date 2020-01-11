@@ -26,7 +26,7 @@ Public Class GUI_Principal
         DispositivoCargarDatos()
 
         Try
-            Me.BackgroundImage = Image.FromFile(G_Fondo)
+            BackgroundImage = Image.FromFile(G_Fondo)
         Catch ex As Exception
 
         End Try

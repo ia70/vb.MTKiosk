@@ -27,7 +27,7 @@
         '(0)Id - (1)IP - (2)Usuario - (3)Password - (4)Puerto
         '(0)No - (1)Plan_1h - (2)Precio - (3)Perfil - (4)Valor - (5)Tipo - (6)Indice
         On Error Resume Next
-        'DispositivoCargarDatos()
+        DispositivoCargarDatos()
         txtModo.SelectedIndex = 0
         txtIP.Text = DatosMikrotik(1)
         txtUsuario.Text = DatosMikrotik(2)
@@ -310,6 +310,10 @@
             _Tecla = Convert.ToInt32(txtTecla.Text)
         End If
 
+        If txtFondo.TextLength > 4 Then
+            GUI_Principal.BackgroundImage = Image.FromFile(txtFondo.Text)
+        End If
+
         If DB.Guardar(txtNombreEmpresa.Text, txtLogotipo.Text, Convert.ToInt32(txtCreditos.Value), txtNombreImpresora.Text, _Tecla, txtModo.SelectedIndex, txtQR.Checked, Convert.ToInt32(txtTiempoFicha.Value), txtFondo.Text) Then
             Mensaje("Información guardada!")
             DispositivoCargarDatos()
@@ -321,7 +325,9 @@
     Private Sub BtnFondo_Click(sender As Object, e As EventArgs) Handles btnFondo.Click
         If dgFondo.ShowDialog() <> DialogResult.Cancel Then
             txtFondo.Text = dgFondo.FileName
-            RefrescarFondo()
+            If txtFondo.TextLength > 4 Then
+                GUI_Principal.BackgroundImage = Image.FromFile(txtFondo.Text)
+            End If
         End If
     End Sub
 End Class
