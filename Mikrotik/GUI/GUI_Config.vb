@@ -179,7 +179,7 @@
             _Plan_nombre(x) = txtPlan1.SelectedItem
             _Plan(x) = _Plan_nombre(x)
             _Plan_nombre(x) = _Plan_nombre(x).Replace("_", " ")
-            _Costo(x) = Convert.ToInt32(txtPrecio1.Text)
+            _Costo(x) = Val(txtPrecio1.Text)
 
             x += 1
             _Plan_nombre(x) = txtPlan2.SelectedItem
@@ -191,7 +191,7 @@
             _Plan_nombre(x) = txtPlan3.SelectedItem
             _Plan(x) = _Plan_nombre(x)
             _Plan_nombre(x) = _Plan_nombre(x).Replace("_", " ")
-            _Costo(x) = Convert.ToInt32(txtPrecio3.Text)
+            _Costo(x) = Val(txtPrecio3.Text)
 
             x += 1
             '_Plan_nombre(x) = txtCreditos.Value
