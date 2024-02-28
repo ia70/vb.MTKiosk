@@ -85,6 +85,10 @@ Public Class Mikrotik
         MK = Nothing
     End Sub
 
+    Public Function Test() As Boolean
+        Return Test(IP, Puerto, Usuario, Password)
+    End Function
+
     ''' <summary>
     ''' Realiza prueba de conexión
     ''' </summary>

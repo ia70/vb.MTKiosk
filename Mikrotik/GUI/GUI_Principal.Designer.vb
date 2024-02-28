@@ -415,6 +415,7 @@ Partial Class GUI_Principal
         '
         'Joystick
         '
+        Me.Joystick.Enabled = True
         Me.Joystick.Interval = 10
         '
         'GUI_Principal

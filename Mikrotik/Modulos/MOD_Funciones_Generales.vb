@@ -149,10 +149,11 @@ Module MOD_Funciones_Generales
             Exit Sub
         End If
 
-        Dim MK As New Mikrotik
+        Dim MK As New Mikrotik(DatosMikrotik(1), DatosMikrotik(4), DatosMikrotik(2), DatosMikrotik(3))
         Dim Ticket As New XCORU.cImpresoraTickets
 
-        Respuesta = MK.Test(DatosMikrotik(1), DatosMikrotik(2), DatosMikrotik(3), DatosMikrotik(4))
+        '(0)Id - (1)IP - (2)Usuario - (3)Password - (4)Puerto
+        Respuesta = MK.Test()
 
         Try
             If Not Respuesta Then
