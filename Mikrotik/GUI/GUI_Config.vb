@@ -3,12 +3,11 @@
         Dim MK As New Mikrotik()
         Try
             If txtPuerto.Text.Length = 0 Or Val(txtPuerto.Text) = 0 Or Val(txtPuerto.Text) = -1 Then
-                txtPuerto.Text = 8728.ToString
+                txtPuerto.Text = 22.ToString
             End If
 
-            If MK.Open(txtIP.Text, txtUsuario.Text, txtPassword.Text, Convert.ToInt32(txtPuerto.Text)) Then
+            If MK.Test(txtIP.Text, Convert.ToInt32(txtPuerto.Text), txtUsuario.Text, txtPassword.Text) Then
                 Mensaje("¡Conexión establecida correctamente!")
-                MK.Close()
                 Mikrotik_Cargar_Perfiles(txtIP.Text, Convert.ToInt32(txtPuerto.Text), txtUsuario.Text, txtPassword.Text)
                 Cargar_Perfiles()
             Else
@@ -34,6 +33,8 @@
         txtUsuario.Text = DatosMikrotik(2)
         txtPassword.Text = DatosMikrotik(3)
         txtPuerto.Text = DatosMikrotik(4)
+
+
 
         If txtPuerto.TextLength < 1 Then
             txtPuerto.Text = 8728
@@ -93,7 +94,7 @@
 
     Private Sub btnResetMikrotik_Click(sender As Object, e As EventArgs) Handles btnResetMikrotik.Click
         txtIP.Text = ""
-        txtPuerto.Text = "8728"
+        txtPuerto.Text = "22"
         txtUsuario.Text = ""
         txtPassword.Text = ""
         txtIP.Select()
@@ -235,6 +236,19 @@
                 Next
             End If
 
+            If txtPlan0.Items.Count > 0 Then
+                txtPlan0.SelectedIndex = 0
+            End If
+            If txtPlan1.Items.Count > 0 Then
+                txtPlan1.SelectedIndex = 0
+            End If
+            If txtPlan2.Items.Count > 0 Then
+                txtPlan2.SelectedIndex = 0
+            End If
+            If txtPlan3.Items.Count > 0 Then
+                txtPlan3.SelectedIndex = 0
+            End If
+
         Catch ex As Exception
             Mikrotik_Perfiles.Clear()
         End Try
@@ -312,6 +326,7 @@
         End If
 
         If txtFondo.TextLength > 4 Then
+            On Error Resume Next
             GUI_Principal.BackgroundImage = Image.FromFile(txtFondo.Text)
         End If
 

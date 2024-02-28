@@ -1,8 +1,7 @@
-﻿Imports Renci.SshNet
-
-Public Class PRUEBAS_SSH
+﻿Public Class PRUEBAS_SSH
     Private mk As MK
     Private estado As Boolean = False
+
     Private Sub Button1_Click(sender As Object, e As EventArgs) Handles btnIniciar.Click
         Dim user As String = "admin"
         Dim pass As String = "82497EEW"
@@ -10,17 +9,17 @@ Public Class PRUEBAS_SSH
         Dim comando As String = "ip hotspot user profile print"
         Dim res As String
 
-        Try
-            Dim ssh As New SshClient(ip, user, pass)
+        'Try
+        '    Dim ssh As New SshClient(ip, user, pass)
 
-            ssh.Connect()
-            res = ssh.RunCommand(comando).Result
-            txtLog.Text = res
+        '    ssh.Connect()
+        '    res = ssh.RunCommand(comando).Result
+        '    txtLog.Text = res
 
-            ssh.Disconnect()
-        Catch ex As Exception
+        '    ssh.Disconnect()
+        'Catch ex As Exception
 
-        End Try
+        'End Try
 
 
     End Sub

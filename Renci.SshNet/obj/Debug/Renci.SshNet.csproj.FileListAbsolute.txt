@@ -5,3 +5,10 @@ C:\Users\XCORU\Documents\Visual Studio 2019\Proyectos\vb.MTKiosk\Renci.SshNet\ob
 C:\Users\XCORU\Documents\Visual Studio 2019\Proyectos\vb.MTKiosk\Renci.SshNet\obj\Debug\Renci.SshNet.csproj.CoreCompileInputs.cache
 C:\Users\XCORU\Documents\Visual Studio 2019\Proyectos\vb.MTKiosk\Renci.SshNet\obj\Debug\Renci.SshNet.dll
 C:\Users\XCORU\Documents\Visual Studio 2019\Proyectos\vb.MTKiosk\Renci.SshNet\obj\Debug\Renci.SshNet.pdb
+C:\Users\ia70\Documents\Visual Studio 2019\Projects\vb.MTKiosk\Renci.SshNet\bin\Debug\Renci.SshNet.xml
+C:\Users\ia70\Documents\Visual Studio 2019\Projects\vb.MTKiosk\Renci.SshNet\bin\Debug\Renci.SshNet.dll
+C:\Users\ia70\Documents\Visual Studio 2019\Projects\vb.MTKiosk\Renci.SshNet\bin\Debug\Renci.SshNet.pdb
+C:\Users\ia70\Documents\Visual Studio 2019\Projects\vb.MTKiosk\Renci.SshNet\obj\Debug\Renci.SshNet.csproj.AssemblyReference.cache
+C:\Users\ia70\Documents\Visual Studio 2019\Projects\vb.MTKiosk\Renci.SshNet\obj\Debug\Renci.SshNet.csproj.CoreCompileInputs.cache
+C:\Users\ia70\Documents\Visual Studio 2019\Projects\vb.MTKiosk\Renci.SshNet\obj\Debug\Renci.SshNet.dll
+C:\Users\ia70\Documents\Visual Studio 2019\Projects\vb.MTKiosk\Renci.SshNet\obj\Debug\Renci.SshNet.pdb

@@ -1,4 +1,6 @@
 ﻿Imports System.IO
+Imports IA70.Mikrotik.Library
+
 Module MOD_Funciones_Generales
 
     'Carga toda la información inicial
@@ -106,33 +108,23 @@ Module MOD_Funciones_Generales
     ''' 'Carga los perfiles existentes del Mikrotik
     ''' </summary>
     Public Sub Mikrotik_Cargar_Perfiles(Optional ByVal _ip As String = Nothing, Optional ByVal _puerto As Integer = Nothing, Optional ByVal _usuario As String = Nothing, Optional ByVal _pass As String = Nothing)
-        Dim MK As New MikrotikAPI
-        Dim Estado As Boolean
-        Dim Respuesta As New List(Of String)
-
-        On Error Resume Next
-
-        If Not _ip Is Nothing Then
-            Estado = MK.Open(_ip, _usuario, _pass, _puerto)
-        Else
-            Estado = MK.Open(DatosMikrotik(1), DatosMikrotik(2), DatosMikrotik(3), DatosMikrotik(4))
+        If IsNothing(_ip) Then
+            '(0)Id - (1)IP - (2)Usuario - (3)Password - (4)Puerto
+            _ip = DatosMikrotik(1)
+            _puerto = DatosMikrotik(4)
+            _usuario = DatosMikrotik(2)
+            _pass = DatosMikrotik(3)
         End If
 
+        If IsNothing(_ip) OrElse _ip = "" Then
+            Exit Sub
+        End If
 
+        Dim MK As New Mikrotik(_ip, _puerto, _usuario, _pass)
 
-        If Estado Then
-            MK.Send("/ip/hotspot/user/profile/print", False)
-            MK.Send("=.proplist=name", True)
-            Respuesta = MK.Read()
+        Mikrotik_Perfiles = MK.ObtenerPerfiles
 
-
-            Mikrotik_Perfiles.Clear()
-
-            For Each Row As String In Respuesta
-                On Error Resume Next
-                Mikrotik_Perfiles.Add(Row.Substring(9, Row.Length - 9))
-            Next
-        Else
+        If Mikrotik_Perfiles.Count = 0 Then
             If MostrarError Then
                 Mensaje("No se pueden cargar los perfiles!", 2)
             End If
@@ -157,10 +149,10 @@ Module MOD_Funciones_Generales
             Exit Sub
         End If
 
-        Dim MK As New Mikrotik()
+        Dim MK As New Mikrotik
         Dim Ticket As New XCORU.cImpresoraTickets
 
-        Respuesta = MK.Open(DatosMikrotik(1), DatosMikrotik(2), DatosMikrotik(3), DatosMikrotik(4))
+        Respuesta = MK.Test(DatosMikrotik(1), DatosMikrotik(2), DatosMikrotik(3), DatosMikrotik(4))
 
         Try
             If Not Respuesta Then
@@ -175,10 +167,9 @@ Module MOD_Funciones_Generales
                     Datos(1) = ""
                 End If
 
-                MK.Insertar(Datos(0), Datos(1), "", Plan(Valor, 2)) '************************
+                MK.CrearUsuarioHostpot(Plan(Valor, 2), Datos(0), Datos(1)) '************************
                 DB.HistorialInsertar(Datos(0), Datos(1), Plan(Valor, 2))
 
-                MK.Close()
                 GUI_Principal.txtUsuario.Text = Datos(0)
                 GUI_Principal.txtPassword.Text = Datos(1)
 
@@ -202,17 +193,17 @@ Module MOD_Funciones_Generales
                 End If
 
                 Ticket.Usuario = Datos(0)
-                    Ticket.Password = Datos(1)
+                Ticket.Password = Datos(1)
 
 
-                    If File.Exists(G_LogotipoEmpresa) Then
-                        Ticket.Logotipo = Image.FromFile(G_LogotipoEmpresa)
-                    End If
-
-
-                    Ticket.ImprimirTicket()
-                    GUI_Principal.TiempoVisualizacion.Enabled = True
+                If File.Exists(G_LogotipoEmpresa) Then
+                    Ticket.Logotipo = Image.FromFile(G_LogotipoEmpresa)
                 End If
+
+
+                Ticket.ImprimirTicket()
+                GUI_Principal.TiempoVisualizacion.Enabled = True
+            End If
         Catch ex As Exception
             'Mensaje("Error al intentar imprimir!", 2)
             If MostrarError Then

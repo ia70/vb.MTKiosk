@@ -383,7 +383,7 @@ Public Class Activacion
         Dim Info(4) As String
 
         Try
-            If Cadena.Length < 10 Then
+            If IsNothing(Cadena) OrElse Cadena.Length < 10 Then
                 Return {"", "", "", ""}
             End If
 

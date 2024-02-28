@@ -1,7 +1,7 @@
 ﻿Imports System.IO
 Imports System.Net.Sockets
 
-Public Class MikrotikAPI
+Public Class MikrotikAPI2
     Private IP As String = ""                   'Dirección IP del Mikrotik
     Private Puerto As Integer = 0               'Puerto a la escucha
     Private Usuario As String = ""              'Nombre de usuario
@@ -100,9 +100,9 @@ Public Class MikrotikAPI
 
 
     Public Sub New(ByVal ipOrDns As String, Optional ByVal port As Integer = -1)
-            Dim ips = Net.Dns.GetHostEntry(ipOrDns)
+        Dim ips = Net.Dns.GetHostEntry(ipOrDns)
 
-        tcp_Con.Connect(ips.AddressList(0), If(port = -1, 8728, port))
+        TCP_Con.Connect(ips.AddressList(0), If(port = -1, 8728, port))
         TCP_Stream = TCP_Con.GetStream()
     End Sub
 
@@ -193,34 +193,34 @@ Public Class MikrotikAPI
                     tmp(1) = TCP_Stream.ReadByte()
                     tmp(0) = TCP_Stream.ReadByte()
                     count = BitConverter.ToInt32(tmp, 0)
-                    Case Else
-                        Exit While   'err
-                End Select
+                Case Else
+                    Exit While   'err
+            End Select
 
             For i = 0 To count - 1
                 o += ChrW(TCP_Stream.ReadByte())
             Next
         End While
-            Return output
-        End Function
+        Return output
+    End Function
 
-        Function EncodeLength(ByVal l As Integer) As Byte()
-            If l < &H80 Then
-                Dim tmp = BitConverter.GetBytes(l)
-                Return New Byte() {tmp(0)}
-            ElseIf l < &H4000 Then
-                Dim tmp = BitConverter.GetBytes(l Or &H8000)
-                Return New Byte() {tmp(1), tmp(0)}
-            ElseIf l < &H200000 Then
-                Dim tmp = BitConverter.GetBytes(l Or &HC00000)
-                Return New Byte() {tmp(2), tmp(1), tmp(0)}
-            ElseIf l < &H10000000 Then
-                Dim tmp = BitConverter.GetBytes(l Or &HE0000000)
-                Return New Byte() {tmp(3), tmp(2), tmp(1), tmp(0)}
-            Else
-                Dim tmp = BitConverter.GetBytes(l)
-                Return New Byte() {&HF0, tmp(3), tmp(2), tmp(1), tmp(0)}
-            End If
-        End Function
+    Function EncodeLength(ByVal l As Integer) As Byte()
+        If l < &H80 Then
+            Dim tmp = BitConverter.GetBytes(l)
+            Return New Byte() {tmp(0)}
+        ElseIf l < &H4000 Then
+            Dim tmp = BitConverter.GetBytes(l Or &H8000)
+            Return New Byte() {tmp(1), tmp(0)}
+        ElseIf l < &H200000 Then
+            Dim tmp = BitConverter.GetBytes(l Or &HC00000)
+            Return New Byte() {tmp(2), tmp(1), tmp(0)}
+        ElseIf l < &H10000000 Then
+            Dim tmp = BitConverter.GetBytes(l Or &HE0000000)
+            Return New Byte() {tmp(3), tmp(2), tmp(1), tmp(0)}
+        Else
+            Dim tmp = BitConverter.GetBytes(l)
+            Return New Byte() {&HF0, tmp(3), tmp(2), tmp(1), tmp(0)}
+        End If
+    End Function
 
-    End Class
+End Class

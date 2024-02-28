@@ -11,7 +11,7 @@
     <AssemblyName>Mikrotik</AssemblyName>
     <FileAlignment>512</FileAlignment>
     <MyType>WindowsForms</MyType>
-    <TargetFrameworkVersion>v4.6.2</TargetFrameworkVersion>
+    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
     <PublishUrl>publish\</PublishUrl>
     <Install>true</Install>
@@ -125,7 +125,7 @@
     </Compile>
     <Compile Include="Modulos\Mod_Cargar_Info.vb" />
     <Compile Include="Modulos\MOD_Funciones_Generales.vb" />
-    <Compile Include="Clases\Mikrotik\MikrotikAPI.vb" />
+    <Compile Include="Clases\Mikrotik\MikrotikAPI2.vb" />
     <Compile Include="Clases\Mikrotik\Mikrotik.vb" />
     <Compile Include="GUI\GUI_Principal.vb">
       <SubType>Form</SubType>
@@ -139,6 +139,7 @@
     <Compile Include="My Project\Application.Designer.vb">
       <AutoGen>True</AutoGen>
       <DependentUpon>Application.myapp</DependentUpon>
+      <DesignTime>True</DesignTime>
     </Compile>
     <Compile Include="My Project\Resources.Designer.vb">
       <AutoGen>True</AutoGen>
@@ -177,6 +178,9 @@
       <CustomToolNamespace>My.Resources</CustomToolNamespace>
       <SubType>Designer</SubType>
     </EmbeddedResource>
+    <EmbeddedResource Include="PRUEBAS_API.resx">
+      <DependentUpon>PRUEBAS_API.vb</DependentUpon>
+    </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
     <None Include="My Project\app.manifest" />
@@ -192,6 +196,7 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="packages.config" />
     <None Include="Resources\Fondo.png" />
   </ItemGroup>
   <ItemGroup>
@@ -234,9 +239,9 @@
     </BootstrapperPackage>
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\Renci.SshNet\Renci.SshNet.csproj">
-      <Project>{2f5f8c90-0bd1-424f-997c-7bc6280919d1}</Project>
-      <Name>Renci.SshNet</Name>
+    <ProjectReference Include="..\..\cs.IA70.Mikrotik.Library\IA70.Mikrotik.Library\IA70.Mikrotik.Library\IA70.Mikrotik.Library.csproj">
+      <Project>{CA4DBAC3-AF4C-4B8E-B057-BC0DDD2C0FCE}</Project>
+      <Name>IA70.Mikrotik.Library</Name>
     </ProjectReference>
     <ProjectReference Include="..\Security\Security\Security.vbproj">
       <Project>{8a37044d-0403-4ba4-9bbe-505eb0c5b224}</Project>

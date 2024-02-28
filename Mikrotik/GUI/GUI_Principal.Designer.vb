@@ -384,7 +384,7 @@ Partial Class GUI_Principal
         '
         Me.Label1.AutoSize = True
         Me.Label1.LinkColor = System.Drawing.Color.White
-        Me.Label1.Location = New System.Drawing.Point(49, 13)
+        Me.Label1.Location = New System.Drawing.Point(49, 6)
         Me.Label1.Name = "Label1"
         Me.Label1.Size = New System.Drawing.Size(115, 18)
         Me.Label1.TabIndex = 4
@@ -415,7 +415,6 @@ Partial Class GUI_Principal
         '
         'Joystick
         '
-        Me.Joystick.Enabled = True
         Me.Joystick.Interval = 10
         '
         'GUI_Principal

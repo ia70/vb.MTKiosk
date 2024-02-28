@@ -32,7 +32,7 @@ Namespace My
         
         <Global.System.Diagnostics.DebuggerStepThroughAttribute()>  _
         Protected Overrides Sub OnCreateMainForm()
-            Me.MainForm = Global.Mikrotik.GUI_Principal
+            Me.MainForm = Global.Mikrotik.Inicializar_App
         End Sub
     End Class
 End Namespace

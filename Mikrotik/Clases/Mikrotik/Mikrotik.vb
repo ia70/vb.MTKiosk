@@ -1,10 +1,12 @@
-﻿Public Class Mikrotik
+﻿Imports IA70.Mikrotik.Library
+
+Public Class Mikrotik
     Private _IP As String = ""
     Private _Usuario As String = ""
     Private _Password As String = ""
     Private _Puerto As Integer = -1
-    Private _Conexion As Boolean = False
-    Private MK As MikrotikAPI
+
+    Private MK As SSH_Core
 
 #Region "Propiedades"
     ''' <summary>
@@ -59,135 +61,140 @@
         End Set
     End Property
 
-    ''' <summary>
-    ''' Estado de la conexión
-    ''' </summary>
-    ''' <returns></returns>
-    Public Property Conexion As Boolean
-        Get
-            Return _Conexion
-        End Get
-        Set(value As Boolean)
-            _Conexion = value
-        End Set
-    End Property
-
 #End Region
-    ''' <summary>
-    ''' Constructor de clase Mikrotik
-    ''' </summary>
-    ''' <param name="ip_">Establece dirección IP del dispositivo Mikrotik</param>
-    ''' <param name="usuario_">Establece Nombre de usuario</param>
-    ''' <param name="password_">Establece Contraseña</param>
-    Public Sub New(Optional ByVal ip_ As String = "", Optional ByVal usuario_ As String = "", Optional ByVal password_ As String = "", Optional ByVal puerto_ As Integer = 8728)
 
-        If Not ip_ = "" And Not usuario_ = "" And Not password_ = "" Then
-            _IP = ip_
-            _Usuario = usuario_
-            _Password = password_
-            If puerto_ = -1 Or puerto_ = 0 Then
-                _Puerto = 8728
-            Else
-                _Puerto = puerto_
-            End If
-            MK = New MikrotikAPI(_IP, _Usuario, _Password, _Puerto)
-            If MK.Open Then
-                _Conexion = True
-            End If
-            On Error Resume Next
+    ''' <summary>
+    ''' Constructor
+    ''' </summary>
+    Public Sub New()
+    End Sub
+
+    ''' <summary>
+    ''' Construtor de case
+    ''' </summary>
+    ''' <param name="ip">IP Mikrotik</param>
+    ''' <param name="puerto">Puerto</param>
+    ''' <param name="usuario">Usuario</param>
+    ''' <param name="password">Passwrd</param>
+    Public Sub New(ip As String, puerto As Integer, usuario As String, password As String)
+        _IP = ip
+        _Usuario = usuario
+        _Password = password
+        _Puerto = puerto
+
+        MK = Nothing
+    End Sub
+
+    ''' <summary>
+    ''' Realiza prueba de conexión
+    ''' </summary>
+    ''' <param name="ip">IP Mikrotik</param>
+    ''' <param name="puerto">Puerto</param>
+    ''' <param name="usuario">Usuario</param>
+    ''' <param name="password">Password</param>
+    ''' <returns></returns>
+    Public Function Test(ip As String, puerto As Integer, usuario As String, password As String) As Boolean
+        Dim cMK As New SSH_Core
+        Return cMK.TestConnection(ip, puerto, usuario, password)
+    End Function
+
+    ''' <summary>
+    ''' Envia comando a Mikrotik y cierra conexión
+    ''' </summary>
+    ''' <param name="comando">Comando a enviar</param>
+    ''' <returns></returns>
+    Public Function Send(ByVal comando As String) As String
+        Dim cMK As New SSH_Core(_IP, _Puerto, _Usuario, _Password)
+        Return cMK.Send(comando)
+    End Function
+
+    ''' <summary>
+    ''' Envia comando a Mikrotik y persiste la conexión
+    ''' </summary>
+    ''' <param name="comando"></param>
+    ''' <returns></returns>
+    Public Function SendPart(ByVal comando As String) As String
+        If IsNothing(MK) Then
+            MK = New SSH_Core(_IP, _Puerto, _Usuario, _Password)
+        End If
+        Return MK.SendPart(comando)
+    End Function
+
+    ''' <summary>
+    ''' Cierra cnexión persistente a Mikrotik
+    ''' </summary>
+    Public Sub Close()
+        If Not IsNothing(MK) Then
             MK.Close()
+            MK = Nothing
         End If
     End Sub
 
     ''' <summary>
-    ''' Abre conexion con dispositivo
+    ''' Obtiene lista de perfiles Mikrotik
     ''' </summary>
-    ''' <returns>Boolean</returns>
-    Public Function Open(Optional ByVal ip_ As String = "", Optional ByVal usuario_ As String = "", Optional ByVal password_ As String = "", Optional ByVal puerto_ As Integer = 8728) As Boolean
-        If Not ip_ = "" And Not usuario_ = "" And Not password_ = "" Then
-            _IP = ip_
-            _Usuario = usuario_
-            _Password = password_
+    ''' <returns></returns>
+    Public Function ObtenerPerfiles() As List(Of String)
+        Dim perfiles As New List(Of String)
+        Dim result As String
+        Dim ind As Integer
+        Dim aux As String
+
+        result = Send("/ip hotspot user profile print proplist=name terse where !disabled")
+        If result.Substring(0, 5) = "ERROR" Then
+            Return perfiles
         End If
 
-        If puerto_ = -1 Or puerto_ = 0 Then
-            _Puerto = 8728
-        Else
-            _Puerto = puerto_
-        End If
-
-        If _IP = "" Or _Usuario = "" Or _Password = "" Then
-            _Conexion = False
-            Return False
-        Else
-            MK = New MikrotikAPI(_IP, _Usuario, _Password, _Puerto)
-            If MK.Open Then
-                On Error Resume Next
-                MK.Close()
-                _Conexion = True
-                Return True
+        While result.Length > 0
+            aux = obtenerCadena(result, "name=", vbCrLf)
+            perfiles.Add(aux)
+            ind = result.IndexOf(aux)
+            If ind >= 0 Then
+                result = result.Substring(ind + aux.Length)
             End If
+            If result.Replace(vbCrLf, "").Trim().Length <= 1 Then
+                result = ""
+            End If
+        End While
 
-        End If
-        On Error Resume Next
-        MK.Close()
-
-        _Conexion = False
-        Return False
+        Return perfiles
     End Function
 
-    Public Function Close() As Boolean
-        If _Conexion Then
-            MK.Close()
-            MK = Nothing
-            Return True
-        End If
-        Return False
+    Private Function obtenerCadena(ByVal cadena As String, ByVal ini As String, ByVal fin As String) As String
+        Dim _cadenaAux As String = cadena
+        Dim n_ini As Integer
+        Dim n_fin As Integer
 
+        Try
+            n_ini = _cadenaAux.IndexOf(ini)
+            If n_ini >= 0 Then
+                n_ini += ini.Length
+                _cadenaAux = _cadenaAux.Substring(n_ini)
+                n_fin = _cadenaAux.IndexOf(fin)
+                If n_fin > 0 Then
+                    Return _cadenaAux.Substring(0, n_fin)
+                End If
+            End If
+        Catch ex As Exception
+            Console.Error.WriteLine(ex.Message)
+        End Try
+
+        Return ""
     End Function
 
     ''' <summary>
-    ''' Ingresar Usuario a Mikrotik
+    ''' Crea un nuevo usuaro Hostpot
     ''' </summary>
-    ''' <param name="Usuario">Nombre de usuario</param>
-    ''' <param name="Password">Contraseña</param>
-    ''' <param name="Plan">Plan</param>
-    ''' <param name="Perfil">Perfil</param>
-    ''' <returns>
-    ''' True - Si no se generó ningun error
-    ''' False - Si se generó algun error
-    ''' </returns>
-    Public Function Insertar(ByVal Usuario As String, ByVal Password As String, ByVal Plan As String, Perfil As String) As Boolean
-        Dim Estado As Boolean
-
-        MK = New MikrotikAPI(_IP, _Usuario, _Password, _Puerto)
-
-        Estado = MK.Open
-        If Not Estado Then
-            Mensaje("No se pudo crear perfil en dispositivo!", 2)
-            Return False
+    ''' <param name="perfil">Nombre del perfil a aignar</param>
+    ''' <param name="usuario">Nombre de usuario</param>
+    ''' <param name="password">Password</param>
+    ''' <returns></returns>
+    Public Function CrearUsuarioHostpot(ByVal perfil As String, ByVal usuario As String, Optional ByVal password As String = "") As String
+        If password = "" Then
+            Return Send("/ip hotspot user add name=" + usuario + " profile=" + perfil)
+        Else
+            Return Send("/ip hotspot user add name=" + usuario + " password=" + password + " profile=" + perfil)
         End If
-        Try
-            MK.Send("/ip/hotspot/user/add", False)
-            MK.Send("=name=" & Usuario, False)
-            If Not Password = "" Then
-                MK.Send("=password=" & Password, False)
-            End If
-            'MK.Send("=limit-uptime=" & Pl, False)
-            MK.Send("=disabled=no", False)
-            MK.Send("=profile=" & Perfil, True)
-            ' MsgBox(Perfil.ToString)
-            'MK.Send("/ip/hotspot/user/add", False)
-            'MK.Close()
-
-            Return True
-        Catch ex As Exception
-            _Conexion = False
-            MK.Close()
-            If MostrarError Then
-                Mensaje(ex.ToString, 2)
-            End If
-            Return False
-        End Try
     End Function
+
 End Class
