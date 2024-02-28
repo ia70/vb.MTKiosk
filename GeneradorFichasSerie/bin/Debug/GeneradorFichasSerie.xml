@@ -1,0 +1,151 @@
+﻿<?xml version="1.0"?>
+<doc>
+<assembly>
+<name>
+GeneradorFichasSerie
+</name>
+</assembly>
+<members>
+<member name="T:GeneradorFichasSerie.My.Resources.Resources">
+<summary>
+  A strongly-typed resource class, for looking up localized strings, etc.
+</summary>
+</member>
+<member name="P:GeneradorFichasSerie.My.Resources.Resources.ResourceManager">
+<summary>
+  Returns the cached ResourceManager instance used by this class.
+</summary>
+</member>
+<member name="P:GeneradorFichasSerie.My.Resources.Resources.Culture">
+<summary>
+  Overrides the current thread's CurrentUICulture property for all
+  resource lookups using this strongly typed resource class.
+</summary>
+</member>
+<member name="M:GeneradorFichasSerie.Activacion_XCORU.GetRequestCode">
+ <summary>
+  ______________
+ |GetRequestCode| --> Genera código de solicitud.
+ </summary>
+ <returns>Código de solicitud encriptado</returns>
+</member>
+<member name="M:GeneradorFichasSerie.Activacion_XCORU.GetLicenceCode(System.String,System.Int32)">
+ <summary>
+  ______________
+ |GetLicenceCode| --> Devuelve Licencia de activacion en base a un código de solicitud.
+ </summary>
+ <param name="Solicitud">Código de solicitud</param>
+ <returns>Licencia</returns>
+</member>
+<member name="M:GeneradorFichasSerie.Activacion_XCORU.Sintaxis_RequestCode(System.String)">
+ <summary>
+  ___________________
+ |Sintaxis_RequesCode| --> Verifica si la sintaxis del REQUESTCODE es correcta.
+ </summary>
+ <param name="RequestCode"></param>
+ <returns></returns>
+</member>
+<member name="M:GeneradorFichasSerie.Activacion_XCORU.Activar_Prodcuto(System.String)">
+ <summary>
+  ________________
+ |Activar_Producto| --> Se encarga de realizar la activación del producto.
+ </summary>
+ <param name="Licencia"></param>
+ <returns></returns>
+</member>
+<member name="M:GeneradorFichasSerie.Activacion_XCORU.Vigencia">
+ <summary>
+  ________
+ |Vigencia| --> Verifia si la licencia está vigente.
+ </summary>
+ <returns>True - si Vigente </returns>
+</member>
+<member name="M:GeneradorFichasSerie.Activacion_XCORU.Validar_Licencia">
+ <summary>
+  _________________
+ |Validar_Licencia| --> Verifica si la sintaxis de la LICENCIA es valida.
+ </summary>
+ <returns></returns>
+</member>
+<member name="M:GeneradorFichasSerie.Activacion_XCORU.Inicializar(System.String)">
+ <summary>
+  ___________
+ |Inicializar| --> Especifica si debe o no iniciarse el Producto.
+ </summary>
+ <param name="Licencia">Licencia de la base de datos</param>
+ <returns>True - Si la activación es correcta</returns>
+</member>
+<member name="M:GeneradorFichasSerie.Activacion_XCORU.PC_Informacion">
+ <summary>
+  ___________________
+ |PC_Informacion| --> Se encarga de cargar los datos de la PC.
+ </summary>
+</member>
+<member name="M:GeneradorFichasSerie.Activacion_XCORU.DesifrarLicencia(System.String)">
+ <summary>
+  ________________
+ |DesifrarLicencia| --> Desifra información de la licencia.
+ </summary>
+ <param name="Licencia"></param>
+</member>
+<member name="M:GeneradorFichasSerie.Activacion_XCORU.DesifrarSolicitud(System.String)">
+ <summary>
+  _________________
+ |DesifrarSolicitud| --> Desifra información del código de solicitud.
+ </summary>
+ <param name="Solicitud"></param>
+ <returns></returns>
+</member>
+<member name="M:GeneradorFichasSerie.Activacion_XCORU.GetPC_Code">
+ <summary>
+  __________
+ |GetPC_Code| --> Crea HASH único para cada PC en base a información de componentes 
+ </summary>
+ <returns></returns>
+</member>
+<member name="M:GeneradorFichasSerie.Activacion_XCORU.MSG(System.String,System.Int32,System.String)">
+ <summary>
+  ___
+ |MSG| --> Muestra mensaje en pantalla.
+ </summary>
+ <param name="Mensaje">Mensaje a Mostrar</param>
+ <param name="Icono">0Info -1Exclam -2Crit -3Quest</param>
+</member>
+<member name="M:GeneradorFichasSerie.Activacion_XCORU.Encriptar(System.String)">
+ <summary>
+  _________
+ |Encriptar| --> Encripta una cadena.
+ </summary>
+ <param name="Cadena"></param>
+ <returns></returns>
+</member>
+<member name="M:GeneradorFichasSerie.Activacion_XCORU.Desencriptar(System.String)">
+ <summary>
+  ____________
+ |Desencriptar| --> Desencripta una cadena. 
+ </summary>
+ <param name="Cadena_Encriptada"></param>
+ <returns></returns>
+</member>
+<member name="M:GeneradorFichasSerie.Activacion_XCORU.GetLicencia_Registro">
+ <summary>
+  ____________________
+ |GetLicencia_Registro| --> Obtiene licencia del registro de Windows.
+ </summary>
+ <returns>Licencia</returns>
+</member>
+<member name="M:GeneradorFichasSerie.Activacion_XCORU.SetLicencia_Registro(System.String)">
+ <summary>
+  ____________________
+ |SetLicencia_Registro| --> Establece o guarda licencia en el registro de Windows.
+ </summary>
+ <param name="Licencia"></param>
+</member>
+<member name="M:GeneradorFichasSerie.Activacion_XCORU.DelLicencia_Registro">
+ <summary>
+  ____________________
+ |DelLicencia_Registro| --> Elimina Licencia del registro de Windows.
+ </summary>
+</member>
+</members>
+</doc>

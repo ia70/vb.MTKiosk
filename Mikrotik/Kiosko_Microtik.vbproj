@@ -125,7 +125,6 @@
     </Compile>
     <Compile Include="Modulos\Mod_Cargar_Info.vb" />
     <Compile Include="Modulos\MOD_Funciones_Generales.vb" />
-    <Compile Include="Clases\Mikrotik\MikrotikAPI2.vb" />
     <Compile Include="Clases\Mikrotik\Mikrotik.vb" />
     <Compile Include="GUI\GUI_Principal.vb">
       <SubType>Form</SubType>
