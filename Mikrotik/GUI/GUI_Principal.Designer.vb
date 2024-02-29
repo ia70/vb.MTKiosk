@@ -68,6 +68,7 @@ Partial Class GUI_Principal
         '
         'P_Header
         '
+        Me.P_Header.BackColor = System.Drawing.SystemColors.MenuHighlight
         Me.P_Header.BackgroundImage = Global.Mikrotik.My.Resources.Resources.Fondo
         Me.P_Header.Controls.Add(Me.picLogotipo)
         Me.P_Header.Controls.Add(Me.txtNombreEmpresa)
@@ -133,7 +134,7 @@ Partial Class GUI_Principal
         '
         Me.Label6.Dock = System.Windows.Forms.DockStyle.Top
         Me.Label6.Font = New System.Drawing.Font("Arial", 18.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label6.ForeColor = System.Drawing.Color.Lime
+        Me.Label6.ForeColor = System.Drawing.Color.AliceBlue
         Me.Label6.Location = New System.Drawing.Point(0, 0)
         Me.Label6.Name = "Label6"
         Me.Label6.Size = New System.Drawing.Size(257, 34)
@@ -145,7 +146,7 @@ Partial Class GUI_Principal
         '
         Me.Creditos.BackColor = System.Drawing.Color.Transparent
         Me.Creditos.Font = New System.Drawing.Font("Bahnschrift", 68.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Creditos.ForeColor = System.Drawing.Color.Red
+        Me.Creditos.ForeColor = System.Drawing.Color.Transparent
         Me.Creditos.Location = New System.Drawing.Point(0, 21)
         Me.Creditos.Name = "Creditos"
         Me.Creditos.Size = New System.Drawing.Size(253, 103)

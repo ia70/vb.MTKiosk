@@ -90,7 +90,7 @@ Partial Class GUI_Config
         '
         'GroupBox2
         '
-        Me.GroupBox2.BackColor = System.Drawing.Color.FromArgb(CType(CType(224, Byte), Integer), CType(CType(224, Byte), Integer), CType(CType(224, Byte), Integer))
+        Me.GroupBox2.BackColor = System.Drawing.Color.LightSteelBlue
         Me.GroupBox2.Controls.Add(Me.btnResetPlanes)
         Me.GroupBox2.Controls.Add(Me.txtPlan3)
         Me.GroupBox2.Controls.Add(Me.txtPlan2)
@@ -118,7 +118,7 @@ Partial Class GUI_Config
         '
         Me.btnResetPlanes.BackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(192, Byte), Integer), CType(CType(192, Byte), Integer))
         Me.btnResetPlanes.Font = New System.Drawing.Font("Arial", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btnResetPlanes.ForeColor = System.Drawing.Color.Gray
+        Me.btnResetPlanes.ForeColor = System.Drawing.Color.Black
         Me.btnResetPlanes.Location = New System.Drawing.Point(493, 87)
         Me.btnResetPlanes.Name = "btnResetPlanes"
         Me.btnResetPlanes.Size = New System.Drawing.Size(89, 28)
@@ -302,7 +302,7 @@ Partial Class GUI_Config
         '
         'GroupBox1
         '
-        Me.GroupBox1.BackColor = System.Drawing.Color.FromArgb(CType(CType(224, Byte), Integer), CType(CType(224, Byte), Integer), CType(CType(224, Byte), Integer))
+        Me.GroupBox1.BackColor = System.Drawing.Color.LightSteelBlue
         Me.GroupBox1.Controls.Add(Me.Label11)
         Me.GroupBox1.Controls.Add(Me.txtPuerto)
         Me.GroupBox1.Controls.Add(Me.btnResetMikrotik)
@@ -335,7 +335,7 @@ Partial Class GUI_Config
         '
         Me.txtPuerto.BackColor = System.Drawing.Color.White
         Me.txtPuerto.Font = New System.Drawing.Font("Arial", 12.0!, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txtPuerto.ForeColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
+        Me.txtPuerto.ForeColor = System.Drawing.Color.Black
         Me.txtPuerto.Location = New System.Drawing.Point(265, 20)
         Me.txtPuerto.MaxLength = 4
         Me.txtPuerto.Name = "txtPuerto"
@@ -348,7 +348,7 @@ Partial Class GUI_Config
         '
         Me.btnResetMikrotik.BackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(192, Byte), Integer), CType(CType(192, Byte), Integer))
         Me.btnResetMikrotik.Font = New System.Drawing.Font("Arial", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btnResetMikrotik.ForeColor = System.Drawing.Color.Gray
+        Me.btnResetMikrotik.ForeColor = System.Drawing.Color.Black
         Me.btnResetMikrotik.Location = New System.Drawing.Point(491, 17)
         Me.btnResetMikrotik.Name = "btnResetMikrotik"
         Me.btnResetMikrotik.Size = New System.Drawing.Size(89, 28)
@@ -360,6 +360,7 @@ Partial Class GUI_Config
         '
         Me.btnGuardarMikrotik.BackColor = System.Drawing.Color.FromArgb(CType(CType(192, Byte), Integer), CType(CType(255, Byte), Integer), CType(CType(192, Byte), Integer))
         Me.btnGuardarMikrotik.Font = New System.Drawing.Font("Arial", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnGuardarMikrotik.ForeColor = System.Drawing.Color.Black
         Me.btnGuardarMikrotik.Location = New System.Drawing.Point(491, 47)
         Me.btnGuardarMikrotik.Name = "btnGuardarMikrotik"
         Me.btnGuardarMikrotik.Size = New System.Drawing.Size(89, 28)
@@ -371,7 +372,7 @@ Partial Class GUI_Config
         '
         Me.btnPrueba.BackColor = System.Drawing.Color.LightSkyBlue
         Me.btnPrueba.Font = New System.Drawing.Font("Arial", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btnPrueba.ForeColor = System.Drawing.Color.Gray
+        Me.btnPrueba.ForeColor = System.Drawing.Color.Black
         Me.btnPrueba.Location = New System.Drawing.Point(386, 20)
         Me.btnPrueba.Name = "btnPrueba"
         Me.btnPrueba.Size = New System.Drawing.Size(89, 28)
@@ -443,7 +444,7 @@ Partial Class GUI_Config
         '
         'GroupBox3
         '
-        Me.GroupBox3.BackColor = System.Drawing.Color.FromArgb(CType(CType(224, Byte), Integer), CType(CType(224, Byte), Integer), CType(CType(224, Byte), Integer))
+        Me.GroupBox3.BackColor = System.Drawing.Color.AliceBlue
         Me.GroupBox3.Controls.Add(Me.txtTiempoFicha)
         Me.GroupBox3.Controls.Add(Me.Label19)
         Me.GroupBox3.Controls.Add(Me.txtQR)
@@ -483,7 +484,7 @@ Partial Class GUI_Config
         Me.txtTiempoFicha.Name = "txtTiempoFicha"
         Me.txtTiempoFicha.Size = New System.Drawing.Size(79, 26)
         Me.txtTiempoFicha.TabIndex = 51
-        Me.txtTiempoFicha.Value = New Decimal(New Integer() {5, 0, 0, 0})
+        Me.txtTiempoFicha.Value = New Decimal(New Integer() {10, 0, 0, 0})
         '
         'Label19
         '
@@ -530,13 +531,11 @@ Partial Class GUI_Config
         'txtFondo
         '
         Me.txtFondo.BackColor = System.Drawing.Color.White
-        Me.txtFondo.Enabled = False
         Me.txtFondo.Font = New System.Drawing.Font("Arial", 12.0!, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.txtFondo.ForeColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
         Me.txtFondo.Location = New System.Drawing.Point(172, 77)
         Me.txtFondo.MaxLength = 3000
         Me.txtFondo.Name = "txtFondo"
-        Me.txtFondo.ReadOnly = True
         Me.txtFondo.Size = New System.Drawing.Size(204, 26)
         Me.txtFondo.TabIndex = 45
         Me.txtFondo.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
@@ -620,13 +619,11 @@ Partial Class GUI_Config
         'txtLogotipo
         '
         Me.txtLogotipo.BackColor = System.Drawing.Color.White
-        Me.txtLogotipo.Enabled = False
         Me.txtLogotipo.Font = New System.Drawing.Font("Arial", 12.0!, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.txtLogotipo.ForeColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
         Me.txtLogotipo.Location = New System.Drawing.Point(172, 49)
         Me.txtLogotipo.MaxLength = 3000
         Me.txtLogotipo.Name = "txtLogotipo"
-        Me.txtLogotipo.ReadOnly = True
         Me.txtLogotipo.Size = New System.Drawing.Size(204, 26)
         Me.txtLogotipo.TabIndex = 37
         Me.txtLogotipo.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
@@ -659,7 +656,6 @@ Partial Class GUI_Config
         Me.txtNombreImpresora.Location = New System.Drawing.Point(172, 105)
         Me.txtNombreImpresora.MaxLength = 50
         Me.txtNombreImpresora.Name = "txtNombreImpresora"
-        Me.txtNombreImpresora.ReadOnly = True
         Me.txtNombreImpresora.Size = New System.Drawing.Size(204, 26)
         Me.txtNombreImpresora.TabIndex = 28
         Me.txtNombreImpresora.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
@@ -668,7 +664,7 @@ Partial Class GUI_Config
         '
         Me.btnResetGeneral.BackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(192, Byte), Integer), CType(CType(192, Byte), Integer))
         Me.btnResetGeneral.Font = New System.Drawing.Font("Arial", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btnResetGeneral.ForeColor = System.Drawing.Color.Gray
+        Me.btnResetGeneral.ForeColor = System.Drawing.Color.Black
         Me.btnResetGeneral.Location = New System.Drawing.Point(389, 193)
         Me.btnResetGeneral.Name = "btnResetGeneral"
         Me.btnResetGeneral.Size = New System.Drawing.Size(89, 28)
@@ -725,7 +721,7 @@ Partial Class GUI_Config
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(9.0!, 18.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.BackColor = System.Drawing.Color.Gray
+        Me.BackColor = System.Drawing.Color.Silver
         Me.ClientSize = New System.Drawing.Size(591, 465)
         Me.Controls.Add(Me.GroupBox3)
         Me.Controls.Add(Me.GroupBox2)

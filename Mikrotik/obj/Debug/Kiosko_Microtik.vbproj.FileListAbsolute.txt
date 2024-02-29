@@ -28,11 +28,17 @@ C:\Users\XCORU\Documents\Visual Studio 2019\Proyectos\vb.MTKiosk\Mikrotik\obj\De
 C:\Users\ia70\Documents\Visual Studio 2019\Projects\vb.MTKiosk\Mikrotik\bin\Debug\Mikrotik.exe.config
 C:\Users\ia70\Documents\Visual Studio 2019\Projects\vb.MTKiosk\Mikrotik\bin\Debug\Mikrotik.exe
 C:\Users\ia70\Documents\Visual Studio 2019\Projects\vb.MTKiosk\Mikrotik\bin\Debug\Mikrotik.pdb
-C:\Users\ia70\Documents\Visual Studio 2019\Projects\vb.MTKiosk\Mikrotik\bin\Debug\Renci.SshNet.dll
+C:\Users\ia70\Documents\Visual Studio 2019\Projects\vb.MTKiosk\Mikrotik\bin\Debug\IA70.Mikrotik.Library.dll
 C:\Users\ia70\Documents\Visual Studio 2019\Projects\vb.MTKiosk\Mikrotik\bin\Debug\Security.exe
 C:\Users\ia70\Documents\Visual Studio 2019\Projects\vb.MTKiosk\Mikrotik\bin\Debug\ThoughtWorks.QRCode.dll
 C:\Users\ia70\Documents\Visual Studio 2019\Projects\vb.MTKiosk\Mikrotik\bin\Debug\XCORU.dll
+C:\Users\ia70\Documents\Visual Studio 2019\Projects\vb.MTKiosk\Mikrotik\bin\Debug\Renci.SshNet.dll
 C:\Users\ia70\Documents\Visual Studio 2019\Projects\vb.MTKiosk\Mikrotik\bin\Debug\itextsharp.dll
+C:\Users\ia70\Documents\Visual Studio 2019\Projects\vb.MTKiosk\Mikrotik\bin\Debug\Microsoft.Bcl.AsyncInterfaces.dll
+C:\Users\ia70\Documents\Visual Studio 2019\Projects\vb.MTKiosk\Mikrotik\bin\Debug\System.Threading.Tasks.Extensions.dll
+C:\Users\ia70\Documents\Visual Studio 2019\Projects\vb.MTKiosk\Mikrotik\bin\Debug\netstandard.dll
+C:\Users\ia70\Documents\Visual Studio 2019\Projects\vb.MTKiosk\Mikrotik\bin\Debug\System.Runtime.CompilerServices.Unsafe.dll
+C:\Users\ia70\Documents\Visual Studio 2019\Projects\vb.MTKiosk\Mikrotik\bin\Debug\IA70.Mikrotik.Library.pdb
 C:\Users\ia70\Documents\Visual Studio 2019\Projects\vb.MTKiosk\Mikrotik\bin\Debug\Security.pdb
 C:\Users\ia70\Documents\Visual Studio 2019\Projects\vb.MTKiosk\Mikrotik\bin\Debug\Security.xml
 C:\Users\ia70\Documents\Visual Studio 2019\Projects\vb.MTKiosk\Mikrotik\bin\Debug\Security.exe.config
@@ -49,8 +55,3 @@ C:\Users\ia70\Documents\Visual Studio 2019\Projects\vb.MTKiosk\Mikrotik\obj\Debu
 C:\Users\ia70\Documents\Visual Studio 2019\Projects\vb.MTKiosk\Mikrotik\obj\Debug\Kiosko_Microtik.vbproj.CopyComplete
 C:\Users\ia70\Documents\Visual Studio 2019\Projects\vb.MTKiosk\Mikrotik\obj\Debug\Mikrotik.exe
 C:\Users\ia70\Documents\Visual Studio 2019\Projects\vb.MTKiosk\Mikrotik\obj\Debug\Mikrotik.pdb
-C:\Users\ia70\Documents\Visual Studio 2019\Projects\vb.MTKiosk\Mikrotik\bin\Debug\IA70.Mikrotik.Library.dll
-C:\Users\ia70\Documents\Visual Studio 2019\Projects\vb.MTKiosk\Mikrotik\bin\Debug\Microsoft.Bcl.AsyncInterfaces.dll
-C:\Users\ia70\Documents\Visual Studio 2019\Projects\vb.MTKiosk\Mikrotik\bin\Debug\System.Threading.Tasks.Extensions.dll
-C:\Users\ia70\Documents\Visual Studio 2019\Projects\vb.MTKiosk\Mikrotik\bin\Debug\System.Runtime.CompilerServices.Unsafe.dll
-C:\Users\ia70\Documents\Visual Studio 2019\Projects\vb.MTKiosk\Mikrotik\bin\Debug\IA70.Mikrotik.Library.pdb
