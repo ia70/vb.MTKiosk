@@ -172,7 +172,7 @@ Partial Class GUI_Principal
         '
         'txtPrecio4
         '
-        Me.txtPrecio4.BackColor = System.Drawing.Color.DimGray
+        Me.txtPrecio4.BackColor = System.Drawing.SystemColors.Desktop
         Me.txtPrecio4.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
         Me.txtPrecio4.Font = New System.Drawing.Font("Arial", 27.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.txtPrecio4.ForeColor = System.Drawing.Color.White
@@ -185,7 +185,7 @@ Partial Class GUI_Principal
         '
         'txtPrecio3
         '
-        Me.txtPrecio3.BackColor = System.Drawing.Color.DimGray
+        Me.txtPrecio3.BackColor = System.Drawing.SystemColors.Desktop
         Me.txtPrecio3.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
         Me.txtPrecio3.Font = New System.Drawing.Font("Arial", 27.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.txtPrecio3.ForeColor = System.Drawing.Color.White
@@ -198,7 +198,7 @@ Partial Class GUI_Principal
         '
         'txtPrecio2
         '
-        Me.txtPrecio2.BackColor = System.Drawing.Color.DimGray
+        Me.txtPrecio2.BackColor = System.Drawing.SystemColors.Desktop
         Me.txtPrecio2.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
         Me.txtPrecio2.Font = New System.Drawing.Font("Arial", 27.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.txtPrecio2.ForeColor = System.Drawing.Color.White
@@ -211,7 +211,7 @@ Partial Class GUI_Principal
         '
         'txtPrecio1
         '
-        Me.txtPrecio1.BackColor = System.Drawing.Color.DimGray
+        Me.txtPrecio1.BackColor = System.Drawing.SystemColors.Desktop
         Me.txtPrecio1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
         Me.txtPrecio1.Font = New System.Drawing.Font("Arial", 27.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.txtPrecio1.ForeColor = System.Drawing.Color.White

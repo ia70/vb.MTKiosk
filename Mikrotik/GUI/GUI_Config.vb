@@ -27,7 +27,7 @@
         '(0)Id - (1)IP - (2)Usuario - (3)Password - (4)Puerto
         '(0)No - (1)Plan_1h - (2)Precio - (3)Perfil - (4)Valor - (5)Tipo - (6)Indice
         On Error Resume Next
-        DispositivoCargarDatos()
+        'DispositivoCargarDatos()
         txtModo.SelectedIndex = 0
         txtIP.Text = DatosMikrotik(1)
         txtUsuario.Text = DatosMikrotik(2)
@@ -37,7 +37,7 @@
 
 
         If txtPuerto.TextLength < 1 Then
-            txtPuerto.Text = 8728
+            txtPuerto.Text = 22
         End If
 
         '------------------------------------------------------------------------------------------
