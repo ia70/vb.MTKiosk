@@ -43,14 +43,12 @@ C:\Users\ia70\Documents\Visual Studio 2019\Projects\vb.MTKiosk\Mikrotik\obj\Debu
 C:\Users\ia70\Documents\Visual Studio 2019\Projects\vb.MTKiosk\Mikrotik\obj\Debug\Mikrotik.GUI_Config.resources
 C:\Users\ia70\Documents\Visual Studio 2019\Projects\vb.MTKiosk\Mikrotik\obj\Debug\Mikrotik.GUI_Principal.resources
 C:\Users\ia70\Documents\Visual Studio 2019\Projects\vb.MTKiosk\Mikrotik\obj\Debug\Mikrotik.Inicializar_App.resources
-C:\Users\ia70\Documents\Visual Studio 2019\Projects\vb.MTKiosk\Mikrotik\obj\Debug\Mikrotik.PRUEBAS_SSH.resources
 C:\Users\ia70\Documents\Visual Studio 2019\Projects\vb.MTKiosk\Mikrotik\obj\Debug\Mikrotik.Resources.resources
 C:\Users\ia70\Documents\Visual Studio 2019\Projects\vb.MTKiosk\Mikrotik\obj\Debug\Kiosko_Microtik.vbproj.GenerateResource.cache
 C:\Users\ia70\Documents\Visual Studio 2019\Projects\vb.MTKiosk\Mikrotik\obj\Debug\Kiosko_Microtik.vbproj.CoreCompileInputs.cache
 C:\Users\ia70\Documents\Visual Studio 2019\Projects\vb.MTKiosk\Mikrotik\obj\Debug\Kiosko_Microtik.vbproj.CopyComplete
 C:\Users\ia70\Documents\Visual Studio 2019\Projects\vb.MTKiosk\Mikrotik\obj\Debug\Mikrotik.exe
 C:\Users\ia70\Documents\Visual Studio 2019\Projects\vb.MTKiosk\Mikrotik\obj\Debug\Mikrotik.pdb
-C:\Users\ia70\Documents\Visual Studio 2019\Projects\vb.MTKiosk\Mikrotik\obj\Debug\Mikrotik.PRUEBAS_API.resources
 C:\Users\ia70\Documents\Visual Studio 2019\Projects\vb.MTKiosk\Mikrotik\bin\Debug\IA70.Mikrotik.Library.dll
 C:\Users\ia70\Documents\Visual Studio 2019\Projects\vb.MTKiosk\Mikrotik\bin\Debug\Microsoft.Bcl.AsyncInterfaces.dll
 C:\Users\ia70\Documents\Visual Studio 2019\Projects\vb.MTKiosk\Mikrotik\bin\Debug\System.Threading.Tasks.Extensions.dll

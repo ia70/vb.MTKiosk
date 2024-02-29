@@ -156,10 +156,14 @@ Public Class GUI_Principal
     End Sub
 
     Private Sub Label1_LinkClicked(sender As Object, e As LinkLabelLinkClickedEventArgs) Handles Label1.LinkClicked
-        Process.Start("http://www.xcoru.com")
+        Process.Start("https://" + Info_Pagina)
     End Sub
 
     Private Sub Label1_KeyPress(sender As Object, e As KeyPressEventArgs) Handles Label1.KeyPress
         Call Principal_KeyPress(sender, e)
+    End Sub
+
+    Private Sub LinkLabel1_LinkClicked(sender As Object, e As LinkLabelLinkClickedEventArgs) Handles LinkLabel1.LinkClicked
+        Process.Start("https://www.facebook.com/ia70mx")
     End Sub
 End Class

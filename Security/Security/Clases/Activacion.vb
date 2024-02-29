@@ -6,15 +6,15 @@ Imports System.Text
 Public Class Activacion
 #Region "Configuración"
     'Clave de encriptacion
-    Private _Password_Encriptation As String = "@<Co2-a*TxT_+XXb?1"
+    Private _Password_Encriptation As String = "@.Co2_a*TxT_+XXb?1"
 
     'Encabezado y pie de Codigo de activación antes de Encriptar
-    Private _Lic_Inicio As String = "a/*a+s"
-    Private _Lic_Fin As String = "A*SD++"
+    Private _Lic_Inicio As String = "B/*d+s"
+    Private _Lic_Fin As String = "x*SD+_"
 
     'Encabezado y pie de Codigo de solicitud antes de Encriptar
-    Private _Request_Inicio As String = "-D+/d"
-    Private _Request_Fin As String = "df5//"
+    Private _Request_Inicio As String = "zD+-d"
+    Private _Request_Fin As String = "xf5/_"
 
 #Region "Variables Internas"
     Private FechaActual As Integer = Convert.ToInt32(Format(Today.Date, "yyyyMMdd"))

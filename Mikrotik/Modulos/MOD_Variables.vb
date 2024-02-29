@@ -19,9 +19,9 @@
 #Region "Marca"
     '************ XCORU.COM *********************
     Public MostrarContacto As Boolean
-    Public Info_Pagina As String = "www.xcoru.com"
-    Public Info_Cel As String = "+52 9141088373"
-    Public Info_Correo As String = "info@xcoru.com"
+    Public Info_Pagina As String = "www.ia70.com"
+    Public Info_Cel As String = "+52 9935457192"
+    Public Info_Correo As String = "contacto@ia70.com"
 
 #End Region
 #Region "Mikrotik"

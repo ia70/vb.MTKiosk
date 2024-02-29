@@ -51,8 +51,8 @@ Partial Class GUI_Principal
         Me.Desconectado = New System.Windows.Forms.PictureBox()
         Me.TiempoVisualizacion = New System.Windows.Forms.Timer(Me.components)
         Me.MarcadeAgua = New System.Windows.Forms.Panel()
+        Me.LinkLabel1 = New System.Windows.Forms.LinkLabel()
         Me.Label1 = New System.Windows.Forms.LinkLabel()
-        Me.Label4 = New System.Windows.Forms.Label()
         Me.PictureBox1 = New System.Windows.Forms.PictureBox()
         Me.Joystick = New System.Windows.Forms.Timer(Me.components)
         Me.P_Header.SuspendLayout()
@@ -144,7 +144,7 @@ Partial Class GUI_Principal
         'Creditos
         '
         Me.Creditos.BackColor = System.Drawing.Color.Transparent
-        Me.Creditos.Font = New System.Drawing.Font("Agency FB", 68.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Creditos.Font = New System.Drawing.Font("Bahnschrift", 68.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Creditos.ForeColor = System.Drawing.Color.Red
         Me.Creditos.Location = New System.Drawing.Point(0, 21)
         Me.Creditos.Name = "Creditos"
@@ -271,6 +271,7 @@ Partial Class GUI_Principal
         '
         'Datos
         '
+        Me.Datos.BackColor = System.Drawing.Color.AliceBlue
         Me.Datos.Controls.Add(Me.txtConteo)
         Me.Datos.Controls.Add(Me.txtPassword)
         Me.Datos.Controls.Add(Me.txtUsuario)
@@ -372,43 +373,42 @@ Partial Class GUI_Principal
         'MarcadeAgua
         '
         Me.MarcadeAgua.BackColor = System.Drawing.Color.Transparent
+        Me.MarcadeAgua.Controls.Add(Me.LinkLabel1)
         Me.MarcadeAgua.Controls.Add(Me.Label1)
-        Me.MarcadeAgua.Controls.Add(Me.Label4)
         Me.MarcadeAgua.Controls.Add(Me.PictureBox1)
         Me.MarcadeAgua.Location = New System.Drawing.Point(247, 142)
         Me.MarcadeAgua.Name = "MarcadeAgua"
-        Me.MarcadeAgua.Size = New System.Drawing.Size(199, 50)
+        Me.MarcadeAgua.Size = New System.Drawing.Size(182, 56)
         Me.MarcadeAgua.TabIndex = 14
+        '
+        'LinkLabel1
+        '
+        Me.LinkLabel1.AutoSize = True
+        Me.LinkLabel1.LinkColor = System.Drawing.Color.White
+        Me.LinkLabel1.Location = New System.Drawing.Point(49, 28)
+        Me.LinkLabel1.Name = "LinkLabel1"
+        Me.LinkLabel1.Size = New System.Drawing.Size(128, 18)
+        Me.LinkLabel1.TabIndex = 5
+        Me.LinkLabel1.TabStop = True
+        Me.LinkLabel1.Text = "facebook/ia70mx"
         '
         'Label1
         '
         Me.Label1.AutoSize = True
         Me.Label1.LinkColor = System.Drawing.Color.White
-        Me.Label1.Location = New System.Drawing.Point(49, 6)
+        Me.Label1.Location = New System.Drawing.Point(49, 5)
         Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(115, 18)
+        Me.Label1.Size = New System.Drawing.Size(109, 18)
         Me.Label1.TabIndex = 4
         Me.Label1.TabStop = True
-        Me.Label1.Text = "www.xcoru.com"
-        '
-        'Label4
-        '
-        Me.Label4.AutoSize = True
-        Me.Label4.Font = New System.Drawing.Font("Arial", 12.0!, CType((System.Drawing.FontStyle.Italic Or System.Drawing.FontStyle.Underline), System.Drawing.FontStyle), System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label4.ForeColor = System.Drawing.Color.White
-        Me.Label4.Location = New System.Drawing.Point(45, 22)
-        Me.Label4.Name = "Label4"
-        Me.Label4.Size = New System.Drawing.Size(152, 19)
-        Me.Label4.TabIndex = 3
-        Me.Label4.Text = "facebook.com/xcoru"
-        Me.Label4.Visible = False
+        Me.Label1.Text = "www.ia70.com"
         '
         'PictureBox1
         '
         Me.PictureBox1.Image = Global.Mikrotik.My.Resources.Resources.LOGO_100x100_No_Fondo
         Me.PictureBox1.Location = New System.Drawing.Point(5, 4)
         Me.PictureBox1.Name = "PictureBox1"
-        Me.PictureBox1.Size = New System.Drawing.Size(37, 39)
+        Me.PictureBox1.Size = New System.Drawing.Size(38, 49)
         Me.PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
         Me.PictureBox1.TabIndex = 0
         Me.PictureBox1.TabStop = False
@@ -422,7 +422,7 @@ Partial Class GUI_Principal
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(9.0!, 18.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.BackgroundImage = Global.Mikrotik.My.Resources.Resources.Fondo_principal
+        Me.BackgroundImage = Global.Mikrotik.My.Resources.Resources._5_pasos_para_crear_y_gestionar_una_estrategia_de_redes_sociales
         Me.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
         Me.ClientSize = New System.Drawing.Size(1200, 855)
         Me.Controls.Add(Me.MarcadeAgua)
@@ -482,7 +482,7 @@ Partial Class GUI_Principal
     Friend WithEvents MarcadeAgua As Panel
     Friend WithEvents PictureBox1 As PictureBox
     Friend WithEvents Joystick As Timer
-    Friend WithEvents Label4 As Label
     Friend WithEvents picLogotipo As PictureBox
     Friend WithEvents Label1 As LinkLabel
+    Friend WithEvents LinkLabel1 As LinkLabel
 End Class

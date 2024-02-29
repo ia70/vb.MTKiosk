@@ -18,16 +18,16 @@ Public Class Activacion_XCORU
     'Private _Lic_HashPC As String = ""
     Private _Lic_Expiracion As Integer = 20180501
 
-    'Contraseña de Encriptación
-    Private _Lic_Password_Encriptation As String = "@<Co2-a*TxT_+XXb?1"
+    'Clave de encriptacion
+    Private _Password_Encriptation As String = "@.Co2_a*TxT_+XXb?1"
 
-    'Encabezado y pie de Codigo de activación
-    Private _Lic_Inicio As String = "a/*a+s"
-    Private _Lic_Fin As String = "A*SD++"
+    'Encabezado y pie de Codigo de activación antes de Encriptar
+    Private _Lic_Inicio As String = "B/*d+s"
+    Private _Lic_Fin As String = "x*SD+_"
 
-    'Encabezado y pie de Codigo de solicitud
-    Private _Request_Ini As String = "-D+/d"
-    Private _Request_Fin As String = "df5//"
+    'Encabezado y pie de Codigo de solicitud antes de Encriptar
+    Private _Request_Inicio As String = "zD+-d"
+    Private _Request_Fin As String = "xf5/_"
 
 #End Region
 #Region "Variables secundarias"
@@ -75,7 +75,7 @@ Public Class Activacion_XCORU
         Dim Codigo As String
         Dim Cadena As String = ""
 
-        Cadena = _Request_Ini & GetPC_Code() & _Request_Fin
+        Cadena = _Request_Inicio & GetPC_Code() & _Request_Fin
         Codigo = Encriptar(Cadena)
 
         Return Codigo
@@ -110,14 +110,14 @@ Public Class Activacion_XCORU
         Try
             SolicitudDecode = Desencriptar(RequestCode)
 
-            If SolicitudDecode.Length < (_Request_Ini.Length + _Request_Fin.Length) Then
+            If SolicitudDecode.Length < (_Request_Inicio.Length + _Request_Fin.Length) Then
                 Return False
             End If
 
-            Aux2 = SolicitudDecode.Substring(_Request_Ini.Length, SolicitudDecode.Length - (_Request_Ini.Length + _Request_Fin.Length))
+            Aux2 = SolicitudDecode.Substring(_Request_Inicio.Length, SolicitudDecode.Length - (_Request_Inicio.Length + _Request_Fin.Length))
 
-            Aux = SolicitudDecode.Substring(0, _Request_Ini.Length)
-            If Not Aux = _Request_Ini Then
+            Aux = SolicitudDecode.Substring(0, _Request_Inicio.Length)
+            If Not Aux = _Request_Inicio Then
                 Return False
             End If
 
@@ -340,7 +340,7 @@ Public Class Activacion_XCORU
             Dim Cadena As String = Desencriptar(Solicitud)
             Dim HashPC As String = ""
             If Sintaxis_RequestCode(Solicitud) Then
-                HashPC = Cadena.Substring(_Request_Ini.Length, (Cadena.Length - (_Request_Ini.Length + _Request_Fin.Length)))
+                HashPC = Cadena.Substring(_Request_Inicio.Length, (Cadena.Length - (_Request_Inicio.Length + _Request_Fin.Length)))
             End If
             Return HashPC
         Catch ex As Exception
@@ -452,7 +452,7 @@ Public Class Activacion_XCORU
 
         'cpu = GetCPUId()
         Try
-            hmac.Key = Encoding.ASCII.GetBytes(_Lic_Password_Encriptation)
+            hmac.Key = Encoding.ASCII.GetBytes(_Password_Encriptation)
             mother = GetMotherBoardID()
         Catch ex As Exception
             mother = ""
@@ -523,7 +523,7 @@ Public Class Activacion_XCORU
 
     Public Sub New(Optional ByVal Licencia As String = "")
         Try
-            TripleDes.Key = TruncateHash(_Lic_Password_Encriptation, TripleDes.KeySize \ 8)
+            TripleDes.Key = TruncateHash(_Password_Encriptation, TripleDes.KeySize \ 8)
             TripleDes.IV = TruncateHash("", TripleDes.BlockSize \ 8)
             FechaActual = Val(Format(Today.Date, "yyyyMMdd"))
 

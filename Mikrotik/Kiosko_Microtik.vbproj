@@ -116,13 +116,6 @@
     <Compile Include="GUI\Inicializar_App.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="GUI\MK.vb" />
-    <Compile Include="GUI\PRUEBAS_SSH.Designer.vb">
-      <DependentUpon>PRUEBAS_SSH.vb</DependentUpon>
-    </Compile>
-    <Compile Include="GUI\PRUEBAS_SSH.vb">
-      <SubType>Form</SubType>
-    </Compile>
     <Compile Include="Modulos\Mod_Cargar_Info.vb" />
     <Compile Include="Modulos\MOD_Funciones_Generales.vb" />
     <Compile Include="Clases\Mikrotik\Mikrotik.vb" />
@@ -151,12 +144,6 @@
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
     <Compile Include="Clases\QRCode.vb" />
-    <Compile Include="PRUEBAS_API.Designer.vb">
-      <DependentUpon>PRUEBAS_API.vb</DependentUpon>
-    </Compile>
-    <Compile Include="PRUEBAS_API.vb">
-      <SubType>Form</SubType>
-    </Compile>
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="GUI\GUI_Config.resx">
@@ -168,17 +155,11 @@
     <EmbeddedResource Include="GUI\Inicializar_App.resx">
       <DependentUpon>Inicializar_App.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="GUI\PRUEBAS_SSH.resx">
-      <DependentUpon>PRUEBAS_SSH.vb</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="My Project\Resources.resx">
       <Generator>VbMyResourcesResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.vb</LastGenOutput>
       <CustomToolNamespace>My.Resources</CustomToolNamespace>
       <SubType>Designer</SubType>
-    </EmbeddedResource>
-    <EmbeddedResource Include="PRUEBAS_API.resx">
-      <DependentUpon>PRUEBAS_API.vb</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
@@ -221,6 +202,7 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="LOGO_Libersoft_Oficial 2 - 90x90.ico" />
+    <None Include="Resources\5-pasos-para-crear-y-gestionar-una-estrategia-de-redes-sociales.jpg" />
     <None Include="Resources\lupa.png" />
     <None Include="Resources\LOGO 100x100 No Fondo.png" />
     <None Include="Resources\Logo 32x32.png" />
