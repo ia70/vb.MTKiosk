@@ -36,7 +36,6 @@ C:\Users\ia70\Documents\Visual Studio 2019\Projects\vb.MTKiosk\Mikrotik\bin\Debu
 C:\Users\ia70\Documents\Visual Studio 2019\Projects\vb.MTKiosk\Mikrotik\bin\Debug\itextsharp.dll
 C:\Users\ia70\Documents\Visual Studio 2019\Projects\vb.MTKiosk\Mikrotik\bin\Debug\Microsoft.Bcl.AsyncInterfaces.dll
 C:\Users\ia70\Documents\Visual Studio 2019\Projects\vb.MTKiosk\Mikrotik\bin\Debug\System.Threading.Tasks.Extensions.dll
-C:\Users\ia70\Documents\Visual Studio 2019\Projects\vb.MTKiosk\Mikrotik\bin\Debug\netstandard.dll
 C:\Users\ia70\Documents\Visual Studio 2019\Projects\vb.MTKiosk\Mikrotik\bin\Debug\System.Runtime.CompilerServices.Unsafe.dll
 C:\Users\ia70\Documents\Visual Studio 2019\Projects\vb.MTKiosk\Mikrotik\bin\Debug\IA70.Mikrotik.Library.pdb
 C:\Users\ia70\Documents\Visual Studio 2019\Projects\vb.MTKiosk\Mikrotik\bin\Debug\Security.pdb

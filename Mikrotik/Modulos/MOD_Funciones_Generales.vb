@@ -108,27 +108,34 @@ Module MOD_Funciones_Generales
     ''' 'Carga los perfiles existentes del Mikrotik
     ''' </summary>
     Public Sub Mikrotik_Cargar_Perfiles(Optional ByVal _ip As String = Nothing, Optional ByVal _puerto As Integer = Nothing, Optional ByVal _usuario As String = Nothing, Optional ByVal _pass As String = Nothing)
-        If IsNothing(_ip) Then
-            '(0)Id - (1)IP - (2)Usuario - (3)Password - (4)Puerto
-            _ip = DatosMikrotik(1)
-            _puerto = DatosMikrotik(4)
-            _usuario = DatosMikrotik(2)
-            _pass = DatosMikrotik(3)
-        End If
+        Try
 
-        If IsNothing(_ip) OrElse _ip = "" Then
-            Exit Sub
-        End If
-
-        Dim MK As New Mikrotik(_ip, _puerto, _usuario, _pass)
-
-        Mikrotik_Perfiles = MK.ObtenerPerfiles
-
-        If Mikrotik_Perfiles.Count = 0 Then
-            If MostrarError Then
-                Mensaje("No se pueden cargar los perfiles!", 2)
+            If IsNothing(_ip) Then
+                '(0)Id - (1)IP - (2)Usuario - (3)Password - (4)Puerto
+                _ip = DatosMikrotik(1)
+                _puerto = DatosMikrotik(4)
+                _usuario = DatosMikrotik(2)
+                _pass = DatosMikrotik(3)
             End If
-        End If
+
+            If IsNothing(_ip) OrElse _ip = "" Then
+                Exit Sub
+            End If
+
+            Dim MK As New Mikrotik(_ip, _puerto, _usuario, _pass)
+
+            Mikrotik_Perfiles = MK.ObtenerPerfiles
+
+            If Mikrotik_Perfiles.Count = 0 Then
+                If MostrarError Then
+                    Mensaje("No se pueden cargar los perfiles!", 2)
+                End If
+            End If
+        Catch ex As Exception
+            Console.Error.WriteLine()
+            Mensaje("No se pueden cargar los perfiles! ERROR: " + ex.Message, 2)
+        End Try
+
     End Sub
 
 

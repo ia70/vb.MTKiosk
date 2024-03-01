@@ -14,6 +14,7 @@ C:\Users\ia70\Documents\Visual Studio 2019\Projects\vb.MTKiosk\GeneradorFichasSe
 C:\Users\ia70\Documents\Visual Studio 2019\Projects\vb.MTKiosk\GeneradorFichasSerie\bin\Debug\GeneradorFichasSerie.exe
 C:\Users\ia70\Documents\Visual Studio 2019\Projects\vb.MTKiosk\GeneradorFichasSerie\bin\Debug\GeneradorFichasSerie.pdb
 C:\Users\ia70\Documents\Visual Studio 2019\Projects\vb.MTKiosk\GeneradorFichasSerie\bin\Debug\GeneradorFichasSerie.xml
+C:\Users\ia70\Documents\Visual Studio 2019\Projects\vb.MTKiosk\GeneradorFichasSerie\obj\Debug\GeneradorFichasSerie.vbproj.AssemblyReference.cache
 C:\Users\ia70\Documents\Visual Studio 2019\Projects\vb.MTKiosk\GeneradorFichasSerie\obj\Debug\GeneradorFichasSerie.Inicio.resources
 C:\Users\ia70\Documents\Visual Studio 2019\Projects\vb.MTKiosk\GeneradorFichasSerie\obj\Debug\GeneradorFichasSerie.Resources.resources
 C:\Users\ia70\Documents\Visual Studio 2019\Projects\vb.MTKiosk\GeneradorFichasSerie\obj\Debug\GeneradorFichasSerie.vbproj.GenerateResource.cache

@@ -734,8 +734,7 @@ Partial Class GUI_Config
         Me.MinimizeBox = False
         Me.Name = "GUI_Config"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
-        Me.Text = "Configuración - V2.0"
-        Me.TopMost = True
+        Me.Text = "Configuración - V2.1"
         Me.GroupBox2.ResumeLayout(False)
         Me.GroupBox2.PerformLayout()
         CType(Me.txtCreditos, System.ComponentModel.ISupportInitialize).EndInit()

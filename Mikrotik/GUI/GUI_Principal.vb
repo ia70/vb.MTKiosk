@@ -60,15 +60,6 @@ Public Class GUI_Principal
 
     Private Sub Principal_KeyPress(sender As Object, e As KeyPressEventArgs) Handles Me.KeyPress
         If e.KeyChar = ChrW(G_Tecla) Then
-            'If Not C_Cadena_Credito = "" Then
-            'C_NewCredito = CInt(C_Cadena_Credito)
-            'C_Credito += C_NewCredito
-            'C_NewCredito = 0
-            'C_Cadena_Credito = ""
-            'Creditos.Text = Format(C_Credito, "0000")
-            'End If
-            'ElseIf IsNumeric(e.KeyChar) Then
-            'C_Cadena_Credito = C_Cadena_Credito & e.KeyChar
             C_Credito += C_ValorCredito
             Creditos.Text = Format(C_Credito, "0000")
         Else
@@ -83,7 +74,11 @@ Public Class GUI_Principal
                     Operacion(3, Boton4.Text)
                 Case "Q"
                     'Me.Hide()
-                    GUI_Config.Show()
+                    Joystick.Enabled = False
+                    Fecha.Enabled = False
+                    GUI_Config.ShowDialog()
+                    Joystick.Enabled = True
+                    Fecha.Enabled = True
             End Select
         End If
     End Sub
@@ -149,10 +144,6 @@ Public Class GUI_Principal
             Operacion(3, Boton4.Text)
             'Mensaje("8")
         End If
-
-        'txtUsuario.Text = Boton
-        'TextBox7.Text = myjoyEX.dwButtons.ToString
-        'TextBox8.Text = myjoyEX.dwButtonNumber.ToString
     End Sub
 
     Private Sub Label1_LinkClicked(sender As Object, e As LinkLabelLinkClickedEventArgs) Handles Label1.LinkClicked

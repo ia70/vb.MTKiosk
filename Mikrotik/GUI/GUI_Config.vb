@@ -24,72 +24,78 @@
     Private Sub Config_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         Dim y As Integer = 0
 
-        '(0)Id - (1)IP - (2)Usuario - (3)Password - (4)Puerto
-        '(0)No - (1)Plan_1h - (2)Precio - (3)Perfil - (4)Valor - (5)Tipo - (6)Indice
-        On Error Resume Next
-        'DispositivoCargarDatos()
-        txtModo.SelectedIndex = 0
-        txtIP.Text = DatosMikrotik(1)
-        txtUsuario.Text = DatosMikrotik(2)
-        txtPassword.Text = DatosMikrotik(3)
-        txtPuerto.Text = DatosMikrotik(4)
+        Try
+            '(0)Id - (1)IP - (2)Usuario - (3)Password - (4)Puerto
+            '(0)No - (1)Plan_1h - (2)Precio - (3)Perfil - (4)Valor - (5)Tipo - (6)Indice
+            'On Error Resume Next
+            'DispositivoCargarDatos()
+            If Not IsNothing(DatosMikrotik) Then
+                txtModo.SelectedIndex = 0
+                txtIP.Text = DatosMikrotik(1)
+                txtUsuario.Text = DatosMikrotik(2)
+                txtPassword.Text = DatosMikrotik(3)
+                txtPuerto.Text = DatosMikrotik(4)
+            End If
 
 
+            If txtPuerto.TextLength < 1 Then
+                txtPuerto.Text = 22
+            End If
 
-        If txtPuerto.TextLength < 1 Then
-            txtPuerto.Text = 22
-        End If
+            '------------------------------------------------------------------------------------------
+            If Val(Plan(4, 1)) < 1 Then
+                txtCreditos.Value = 1
+            Else
+                txtCreditos.Value = Convert.ToInt32(Val(Plan(4, 1)))
+            End If
+            '------------------------------------------------------------------------------------------
 
-        '------------------------------------------------------------------------------------------
-        If Val(Plan(4, 1)) < 1 Then
-            txtCreditos.Value = 1
-        Else
-            txtCreditos.Value = Convert.ToInt32(Val(Plan(4, 1)))
-        End If
-        '------------------------------------------------------------------------------------------
+            If Mikrotik_Perfiles.Count <= 0 Then
+                'On Error Resume Next
+                Cargar_Perfiles()
+            End If
 
-        If Mikrotik_Perfiles.Count <= 0 Then
-            On Error Resume Next
-            Cargar_Perfiles()
-        End If
+            'On Error Resume Next
+            txtPlan0.SelectedItem = Plan(y, 2)
+            txtPrecio0.Text = Format(Val(Plan(y, 3)), "##0.00")
+            y += 1
 
-        On Error Resume Next
-        txtPlan0.SelectedItem = Plan(y, 2)
-        txtPrecio0.Text = Format(Val(Plan(y, 3)), "##0.00")
-        y += 1
+            'On Error Resume Next
+            txtPlan1.SelectedItem = Plan(y, 2)
+            txtPrecio1.Text = Format(Val(Plan(y, 3)), "##0.00")
+            y += 1
 
-        On Error Resume Next
-        txtPlan1.SelectedItem = Plan(y, 2)
-        txtPrecio1.Text = Format(Val(Plan(y, 3)), "##0.00")
-        y += 1
+            'On Error Resume Next
+            txtPlan2.SelectedItem = Plan(y, 2)
+            txtPrecio2.Text = Format(Val(Plan(y, 3)), "##0.00")
+            y += 1
 
-        On Error Resume Next
-        txtPlan2.SelectedItem = Plan(y, 2)
-        txtPrecio2.Text = Format(Val(Plan(y, 3)), "##0.00")
-        y += 1
+            'On Error Resume Next
+            txtPlan3.SelectedItem = Plan(y, 2)
+            txtPrecio3.Text = Format(Val(Plan(y, 3)), "##0.00")
 
-        On Error Resume Next
-        txtPlan3.SelectedItem = Plan(y, 2)
-        txtPrecio3.Text = Format(Val(Plan(y, 3)), "##0.00")
+            PerfilesVerificar()
 
-        PerfilesVerificar()
+            'GENERAL ------------------------------------------
+            txtNombreEmpresa.Text = G_NombreEmpresa
+            txtLogotipo.Text = G_LogotipoEmpresa
+            txtNombreImpresora.Text = G_Impresora
+            'On Error Resume Next
+            txtQR.Checked = G_QR
+            'On Error Resume Next
+            txtFondo.Text = G_Fondo
+            'On Error Resume Next
+            txtTiempoFicha.Value = G_TiempoVisualizacionFicha
+            txtCreditos.Value = C_ValorCredito
+            txtTecla.Text = ChrW(G_Tecla)
+            'On Error Resume Next
+            txtModo.SelectedIndex = G_Modo
+            'On Error Resume Next
+            picLogotipo.Image = Image.FromFile(G_LogotipoEmpresa)
+        Catch ex As Exception
+            Mensaje("Error: " + ex.Message, 2)
+        End Try
 
-        'GENERAL ------------------------------------------
-        txtNombreEmpresa.Text = G_NombreEmpresa
-        txtLogotipo.Text = G_LogotipoEmpresa
-        txtNombreImpresora.Text = G_Impresora
-        On Error Resume Next
-        txtQR.Checked = G_QR
-        On Error Resume Next
-        txtFondo.Text = G_Fondo
-        On Error Resume Next
-        txtTiempoFicha.Value = G_TiempoVisualizacionFicha
-        txtCreditos.Value = C_ValorCredito
-        txtTecla.Text = ChrW(G_Tecla)
-        On Error Resume Next
-        txtModo.SelectedIndex = G_Modo
-        On Error Resume Next
-        picLogotipo.Image = Image.FromFile(G_LogotipoEmpresa)
     End Sub
 
     Private Sub btnResetMikrotik_Click(sender As Object, e As EventArgs) Handles btnResetMikrotik.Click
